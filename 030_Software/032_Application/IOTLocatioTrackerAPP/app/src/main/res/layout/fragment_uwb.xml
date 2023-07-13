@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.view.UWBFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/black"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_dark"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/fragmentUwb_containerActualValue_label_short_adr"
+                        android:textColor="#ffff"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@color/gray_dark"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fragmentUwb_containerActualValue_label_title_short_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/str_placeholder_disconnect"
+                        android:textColor="#ffff"
+                        android:textSize="25sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:contentDescription="@string/str_placeholder_contentDescription_image"
+                            android:src="@drawable/ic_fragment_uwb_withe" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@color/gray_dark"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/fragmentUwb_containerActualValue_label_trackerUID"
+                        android:textColor="#ffff"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/fragmentUwb_containerActualValue_label_title_UWBDeviceUID"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_weight="1"
+                        android:text="@string/str_placeholder_uwb_id"
+                        android:textColor="#ffff"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@color/gray_dark"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/fragmentUwb_containerActualValue_label_RSSIValue"
+                        android:textColor="#ffff"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/fragmentUwb_containerActualValue_label_RSSIValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="20dp"
+                            android:layout_toStartOf="@+id/fragmentUwb_containerActualValue_label_RSSIValue_UNIT"
+                            android:text="@string/str_placeholder_number_integer"
+                            android:textAlignment="viewEnd"
+                            android:textColor="#ffff"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/fragmentUwb_containerActualValue_label_RSSIValue_UNIT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/fragmentUwb_containerActualValue_label_RSSIValue_Unit"
+                            android:textColor="#ffff"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@color/gray_dark"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/fragmentUwb_containerActualValue_label_DistanceTOAValue"
+                        android:textColor="#ffff"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/fragmentUwb_containerActualValue_label_DistanceTOAValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="20dp"
+                            android:layout_toStartOf="@+id/fragmentUwb_containerActualValue_label_DistanceTOAValue_UNIT"
+                            android:text="@string/str_placeholder_number_float"
+                            android:textAlignment="viewEnd"
+                            android:textColor="#ffff"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/fragmentUwb_containerActualValue_label_DistanceTOAValue_UNIT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/fragmentUwb_containerActualValue_label_DistanceTOAValue_Unit"
+                            android:textColor="#ffff"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@color/gray_dark"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="@string/fragmentUwb_containerActualValue_label_DistanceRSSIValue"
+                        android:textColor="#ffff"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/fragmentUwb_containerActualValue_label_DistanceRssiValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="20dp"
+                            android:layout_toStartOf="@+id/fragmentUwb_containerActualValue_label_DistanceRssiValue_Unit"
+                            android:text="@string/str_placeholder_number_float"
+                            android:textAlignment="viewEnd"
+                            android:textColor="#ffff"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/fragmentUwb_containerActualValue_label_DistanceRssiValue_Unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/fragmentUwb_containerActualValue_label_DistanceRSSIValue_Unit"
+                            android:textColor="#ffff"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/black"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_dark"
+                android:orientation="vertical">
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_column="1"
+                            android:layout_gravity="start"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="4dp"
+                            android:text="@string/fragmentUwb_Table2_row1_Name"
+                            android:textColor="#ffff"
+                            android:textSize="14sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:layout_gravity="start"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="4dp"
+                            android:text="@string/fragmentUwb_Table2_row2_Name"
+                            android:textColor="#ffff"
+                            android:textSize="14sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="3"
+                            android:layout_gravity="start"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="4dp"
+                            android:text="@string/fragmentUwb_Table2_row3_Name"
+                            android:textColor="#ffff"
+                            android:textSize="14sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="4"
+                            android:layout_gravity="start"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="4dp"
+                            android:text="@string/fragmentUwb_Table2_row4_Name"
+                            android:textColor="#ffff"
+                            android:textSize="14sp"
+                            android:textStyle="bold"></TextView>
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_column="1"
+                            android:layout_gravity="start"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingBottom="4dp"
+                            android:text="@string/fragmentUwb_Table2_row1_Unit"
+                            android:textColor="#ffff"
+                            android:textSize="12sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:layout_gravity="start"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingBottom="4dp"
+                            android:text="@string/fragmentUwb_Table2_row2_Unit"
+                            android:textColor="#ffff"
+                            android:textSize="12sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="3"
+                            android:layout_gravity="start"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingBottom="4dp"
+                            android:text="@string/fragmentUwb_Table2_row3_Unit"
+                            android:textColor="#ffff"
+                            android:textSize="12sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="4"
+                            android:layout_gravity="start"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingBottom="4dp"
+                            android:text="@string/fragmentUwb_Table2_row4_Unit"
+                            android:textColor="#ffff"
+                            android:textSize="12sp"
+                            android:textStyle="bold"></TextView>
+                    </TableRow>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_uwb_rssi"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+
+                </TableLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/black"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_dark"
+                android:orientation="vertical">
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_column="1"
+                            android:layout_gravity="start"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="4dp"
+                            android:text="@string/fragmentUwb_Table1_row1_Name"
+                            android:textColor="#ffff"
+                            android:textSize="14sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:layout_gravity="start"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="4dp"
+                            android:text="@string/fragmentUwb_Table1_row2_Name"
+                            android:textColor="#ffff"
+                            android:textSize="14sp"
+                            android:textStyle="bold"></TextView>
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_column="1"
+                            android:layout_gravity="start"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/fragmentUwb_Table1_row1_Unit"
+                            android:textColor="#ffff"
+                            android:textSize="12sp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_column="2"
+                            android:layout_gravity="start"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:paddingBottom="10dp"
+                            android:text="@string/fragmentUwb_Table1_row2_Unit"
+                            android:textColor="#ffff"
+                            android:textSize="12sp"
+                            android:textStyle="bold"></TextView>
+                    </TableRow>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycler_view_uwb_toa"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </TableLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</FrameLayout>

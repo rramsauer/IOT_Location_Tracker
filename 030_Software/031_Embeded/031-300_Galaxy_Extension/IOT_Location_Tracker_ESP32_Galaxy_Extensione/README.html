@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>1&period; UWB BLE Tracker &lpar;DW1000&comma; ESP32&rpar;</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension mikkel-ol.er-syntax-highlighting */
+/* Error */
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <p><a name="readme-top"></a> <!-- Only Top Link -->
+<br /></p>
+<div align="center">
+  <h3 align="center">René Ramsauer</h3>
+  <h4 align="center">Bachelor Project: IOT Localization Tracker</h4>
+  <p align="center">
+    Integration of embedded systems.<br />
+    Last change: 02.04.2023<br />
+    Project name: IoT - Localization ESP32 (Galaxy Extension)<br />
+    Short name: BIC_IoT_LT_ESP32_GE(A)<br />
+    Version: V1.2
+  </p>
+</div>
+<br>
+<h1 id="1-uwb-ble-tracker-dw1000-esp32">1. UWB BLE Tracker (DW1000, ESP32)</h1>
+<p><strong>(Implementierung of UWB Galaxy Extension: &quot;UWB Anchor&quot;)</strong></p>
+<ul>
+<li><a href="#1-uwb-ble-tracker-dw1000-esp32">1. UWB BLE Tracker (DW1000, ESP32)</a>
+<ul>
+<li><a href="#11-introduction">1.1. Introduction</a></li>
+<li><a href="#12-prototype">1.2. Prototype</a>
+<ul>
+<li><a href="#121-target-prototype">1.2.1. Target prototype.</a>
+<ul>
+<li><a href="#1211-components-of-target-prototype">1.2.1.1. Components of target Prototype</a></li>
+<li><a href="#1212-target-prototype-wiring">1.2.1.2. Target prototype wiring</a></li>
+<li><a href="#1213-target-prototype-hardware-block-diagram-red-marked">1.2.1.3. Target prototype hardware block diagram (Red Marked)</a></li>
+<li><a href="#1214-problem-with-target-prototype">1.2.1.4. Problem with target prototype.</a></li>
+</ul>
+</li>
+<li><a href="#122-aktueller-prototype-3rd-party">1.2.2. Aktueller Prototype (3rd Party)</a>
+<ul>
+<li><a href="#1221-aktueller-prototype-3rd-party-hardware-block-diagram">1.2.2.1. Aktueller Prototype (3rd Party) hardware block diagram</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#13-software">1.3. Software</a>
+<ul>
+<li><a href="#131-file-description">1.3.1. File Description</a></li>
+<li><a href="#132-integrierte-entwicklungsumgebung">1.3.2. Integrierte Entwicklungsumgebung</a></li>
+<li><a href="#133-used-libraries-3rd-party">1.3.3. Used libraries (3rd Party)</a></li>
+<li><a href="#134-software-block-diagram">1.3.4. Software Block Diagram</a></li>
+<li><a href="#135-software-struct">1.3.5. Software struct</a>
+<ul>
+<li><a href="#1351-uwb-anchor-service-uwb_anchorh--uwb_anchorcpp">1.3.5.1. UWB Anchor Service (uwb_anchor.h | uwb_anchor.cpp)</a></li>
+<li><a href="#1352-logging-settings-log_settingsh">1.3.5.2. Logging Settings (log_settings.h)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#14-created-by">1.4. Created by:</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="11-introduction">1.1. Introduction</h2>
+<p>This embedded software is an implementation of a so called key tracker system.
+Compared to conventional systems the implementation has a scientific background. For this reason the software only consists of the following tasks:</p>
+<ul>
+<li>Provision of a BLE server with the following sevices:
+<ul>
+<li>BLE Batery level service.</li>
+<li>UWB shared shord adress</li>
+<li>UWB shared unique identifier</li>
+</ul>
+</li>
+<li>Provision of a UWB distance measuring service</li>
+<li>Provision of a battery measuring service.</li>
+</ul>
+<p>Notice: We used a usb power bank for the test setup. Thus the battery service was deactivated with the help of preprocessor stadement in ble_server.h.</p>
+<p>As you can see below, this description consists of two hardware systems. A target prototype and a 3rd party prototype. Since there were some problems with the implementation of the target prototype system and these problems could not be solved in a reasonable time frame, the 3rd party hardware was used.</p>
+<h2 id="12-prototype">1.2. Prototype</h2>
+<h3 id="121-target-prototype">1.2.1. Target prototype.</h3>
+<p><strong>Attention:</strong> Since there were some problems with the prototypes, this system was not commissioned in working order. More detailed information on the problem can be found under &quot;2.2 Problem with target prototype&quot;.</p>
+<p>The target prototype components were selected based on the performance and size of the target system.</p>
+<p><strong>Without insulation</strong></p>
+<p><img src="file:///c:\Users\ramsa\OneDrive\Desktop\Bachelor new Source\IOT_Location_Tracker_ESP32_Galaxy_Extensione\img\Prototyp_FRONT_Tracker.jpg" width="200"/><img src="file:///c:\Users\ramsa\OneDrive\Desktop\Bachelor new Source\IOT_Location_Tracker_ESP32_Galaxy_Extensione\img\Prototyp_BACK_Tracker.jpg" width="200"/></p>
+<p><strong>With insulation for the back to avoid short circuits.</strong></p>
+<p><img src="file:///c:\Users\ramsa\OneDrive\Desktop\Bachelor new Source\IOT_Location_Tracker_ESP32_Galaxy_Extensione\img\Prototyp_ISO_FRONT_Tracker.jpg" width="200"/><img src="file:///c:\Users\ramsa\OneDrive\Desktop\Bachelor new Source\IOT_Location_Tracker_ESP32_Galaxy_Extensione\img\Prototyp_ISO_BACK_Tracker.jpg" width="200"/></p>
+<h4 id="1211-components-of-target-prototype">1.2.1.1. Components of target Prototype</h4>
+<ul>
+<li><a href="https://www.mikroe.com/uwb-click">Mikroe UWB click</a> (UWB Module DWM1000)</li>
+<li><a href="https://docs.arduino.cc/hardware/nano-33-ble">Arduino Nano 33 BLE</a> (yC = nRF52840, Module = NINA-B306)</li>
+<li><a href="https://www.adafruit.com/product/2745">Adafruit LM3671 3.3V Buck Converter Breakout</a> (Buck Converter Breakout)</li>
+<li><a href="https://www.az-delivery.de/products/az-delivery-laderegler-tp4056-micro-usb">AZ-Delivery TP4056</a> (Laderegler)</li>
+<li><a href="https://www.eemb.com/public/image/download/LP542730.pdf">EEMB LP542730</a> (Li-ion Battery)</li>
+<li>Wires, boards and resistors</li>
+<li>OTG Adapter</li>
+</ul>
+<h4 id="1212-target-prototype-wiring">1.2.1.2. Target prototype wiring</h4>
+<img src="file:///c:\Users\ramsa\OneDrive\Desktop\Bachelor new Source\IOT_Location_Tracker_ESP32_Galaxy_Extensione\img\Fritzing_Galaxy_Erweiterung.png" width="700"/>
+<p>As you can see from the prototype picture, this has already been soldered on a prototype board.</p>
+<h4 id="1213-target-prototype-hardware-block-diagram-red-marked">1.2.1.3. Target prototype hardware block diagram (Red Marked)</h4>
+<img src="file:///c:\Users\ramsa\OneDrive\Desktop\Bachelor new Source\IOT_Location_Tracker_ESP32_Galaxy_Extensione\img\HardwareBlockDiagram_Prototype.png" width="900"/>
+<p>For better testing of the system, however, the board was split and the assembly was distributed to the rear and forme. Refer to the photos.</p>
+<h4 id="1214-problem-with-target-prototype">1.2.1.4. Problem with target prototype.</h4>
+<p>During the implementation we had problems with the libary of Arduino. Due to time constraints, we did not pursue fixing the problem. However, we could exclude that the error occurred due to the wrong representation. This was determined with the help of simultaions and measurements with oscilloscope and lapornetzgerät. All inputs and outputs detected the signal with the same level.</p>
+<h3 id="122-aktueller-prototype-3rd-party">1.2.2. Aktueller Prototype (3rd Party)</h3>
+<p>The system &quot;ESP32 UWB&quot; from Makerfabs was used as the current prototype. Which is equipped with an ESP32 and a DW1000 module. See picture:</p>
+<img src="file:///c:\Users\ramsa\OneDrive\Desktop\Bachelor new Source\IOT_Location_Tracker_ESP32_Galaxy_Extensione\img\ESP32_UWB.png" width="400"/>
+<p>Weitere Informatationen finden sie unter &quot;iot-localization_tracker/docs/project_documentation/000_Specification _Requirement/002_Hardware-Specification/...&quot;.</p>
+<h4 id="1221-aktueller-prototype-3rd-party-hardware-block-diagram">1.2.2.1. Aktueller Prototype (3rd Party) hardware block diagram</h4>
+<img src="file:///c:\Users\ramsa\OneDrive\Desktop\Bachelor new Source\IOT_Location_Tracker_ESP32_Galaxy_Extensione\img\ESP32_BLE_UWB_description.png" width="900"/>
+<h2 id="13-software">1.3. Software</h2>
+<h3 id="131-file-description">1.3.1. File Description</h3>
+<pre><code>└── BLE_UWB_Tracker
+   ├── .pio                     // PlatformIO File
+   ├── .vscode                  // PlatformIO File
+   ├── img                      // Image for Readme.md
+   ├── include                  // Directory for includes
+   │   ├── main.h               // Header for Main (main.cpp)
+   │   ├── log_settings.h       // Header for Logging Settings
+   │   ├── uwb_anchor.h         // Header for DWM1000 UWB module (uwb_anchor.cpp)
+   ├── lib
+   ├── src                      // Source-Code File
+   │   ├── main.cpp             // Implementation of Main
+   │   ├── uwb_anchor.cpp       // Implementation of DWM1000 UWB module.
+   └── test                     // No tests were implemented due to the implementation size
+</code></pre>
+<h3 id="132-integrierte-entwicklungsumgebung">1.3.2. Integrierte Entwicklungsumgebung</h3>
+<p>The software was implemented using the PlatformIO IDE.</p>
+<p><img src="file:///c:\Users\ramsa\OneDrive\Desktop\Bachelor new Source\IOT_Location_Tracker_ESP32_Galaxy_Extensione\img\3rd_party\platformio-logo.png" width="50"/> <a href="https://platformio.org/">https://platformio.org/</a></p>
+<h3 id="133-used-libraries-3rd-party">1.3.3. Used libraries (3rd Party)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Include</th>
+<th style="text-align:left">Creator</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&lt;SPI.h&gt;</td>
+<td style="text-align:left">Arduino</td>
+<td style="text-align:left">Library for SPI communication</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;ArduinoLog.h&gt;</td>
+<td style="text-align:left">Thijs Elenbaas</td>
+<td style="text-align:left">An minimalistic Logging framework for Arduino devices</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;Arduino.h&gt;</td>
+<td style="text-align:left">Arduino Libraries</td>
+<td style="text-align:left">librarie für nRF52840</td>
+</tr>
+<tr>
+<td style="text-align:left">&lt;DW1000.h&gt;</td>
+<td style="text-align:left">Thomas Trojer</td>
+<td style="text-align:left">Biblioteck for UWB module (DWM1000)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="134-software-block-diagram">1.3.4. Software Block Diagram</h3>
+<p><strong>Software Block Diagram overview:</strong>(The device implemented here is red marked.)</p>
+<img src="file:///c:\Users\ramsa\OneDrive\Desktop\Bachelor new Source\IOT_Location_Tracker_ESP32_Galaxy_Extensione\img\SoftwareBlockDiagramOverview.png" width="900"/>
+<br>
+<p><strong>Software Block Diagram of Anchor:</strong></p>
+<img src="file:///c:\Users\ramsa\OneDrive\Desktop\Bachelor new Source\IOT_Location_Tracker_ESP32_Galaxy_Extensione\img\SoftwareBlockDiagram.png" width="500"/>
+<h3 id="135-software-struct">1.3.5. Software struct</h3>
+<p>The software is divided into three modules and one logging, with each module implemented in a separate C++ file:</p>
+<ul>
+<li>UWB Anchor Service</li>
+</ul>
+<p>All modules are merged in the main.cpp.</p>
+<h4 id="1351-uwb-anchor-service-uwb_anchorh--uwb_anchorcpp">1.3.5.1. UWB Anchor Service (uwb_anchor.h | uwb_anchor.cpp)</h4>
+<p>The uwb service makes it possible to measure discharges via uwb. To integrate the UWB anchor into the application, only two functions need to be called. The function <code>initUwb()</code> must only be called during initialization and the function <code>uwbLoop()</code> must be called in an interval.</p>
+<pre><code class="language-c"><span class="hljs-comment">/** This function provides the functionalety of the uwb module. */</span>
+<span class="hljs-type">void</span> <span class="hljs-title function_">initUwb</span><span class="hljs-params">()</span>;
+<span class="hljs-comment">/** This function init the uwb module as a Anchor. */</span>
+<span class="hljs-type">void</span> <span class="hljs-title function_">uwbLoop</span><span class="hljs-params">()</span>;
+</code></pre>
+<p>Furthermore, the uwb short address settings and the uwb unique itentifier can be made via the header <code>uwb_anchor.h</code>.</p>
+<pre><code class="language-c"><span class="hljs-comment">// Define Anchor Adress</span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> ADRESS                      <span class="hljs-string">&quot;84:00:5B:D5:A9:9A:E2:9C&quot;</span></span>
+<span class="hljs-comment">// Settings Short Adr.</span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> IS_RENDOM_SHORT_ADR             (true)</span>
+<span class="hljs-comment">// Write measuring data to seriel</span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> WRITE_MEASURING_DATA_TO_SERIEL  (true)</span>
+</code></pre>
+<p>More information you can finde in the code documentation.</p>
+<h4 id="1352-logging-settings-log_settingsh">1.3.5.2. Logging Settings (log_settings.h)</h4>
+<p>The loglevel is set with the parameter:</p>
+<pre><code class="language-c"><span class="hljs-comment">/*
+ * 0 - LOG_LEVEL_SILENT     no output
+ * 1 - LOG_LEVEL_FATAL      fatal errors
+ * 2 - LOG_LEVEL_ERROR      all errors
+ * 3 - LOG_LEVEL_WARNING    errors and warnings
+ * 4 - LOG_LEVEL_INFO       errors, warnings and notices
+ * 4 - LOG_LEVEL_NOTICE     Same as INFO, kept for backward compatibility
+ * 5 - LOG_LEVEL_TRACE      errors, warnings, notices, traces
+ * 6 - LOG_LEVEL_VERBOSE    all
+ */</span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> DEBUG_LV (LOG_LEVEL_VERBOSE)</span>
+</code></pre>
+<p>Furthermore, additional debug output can be output with the following parameters:</p>
+<pre><code class="language-c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> SHOW_UWB_DEVICE_INFO            (true)</span>
+</code></pre>
+<h2 id="14-created-by">1.4. Created by:</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th style="text-align:center">Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>René Josef Ramsauer</td>
+<td style="text-align:center"><a href="mailto:ic18b066@technikum-wien.at">ic18b066@technikum-wien.at</a></td>
+</tr>
+</tbody>
+</table>
+
+        
+        
+    </body>
+    </html>

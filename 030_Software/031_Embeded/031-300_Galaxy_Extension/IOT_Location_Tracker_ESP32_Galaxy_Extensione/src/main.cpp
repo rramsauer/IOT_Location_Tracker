@@ -1,0 +1,75 @@
+/** @file main.c
+ * @brief Main program body
+ *  ****************************************************************
+ *        **Name**            : main.c
+ *  <br>  **Project name**    : IoT - Localization ESP32 (Galaxy Extension)
+ *  <br>  **Short name**      : BIC_IoT_LT_ESP32_GE(A)
+ *  <br>  **Author**          : Ramsauer René
+ *  <br>  **Version**         : V0.0
+ *  <br>  **Created on**      : 05.02.2023
+ *  <br>  **Last change**     : 05.19.2023
+ *  ****************************************************************
+ *  @author René Ramsauer <ic18b066@technikum-wien.at>
+ *
+ * @version 0.1
+ */
+
+/* Includes ------------------------------------------------------------------*/
+/* Libary import*/
+#include <Arduino.h>
+#include <ArduinoLog.h>
+#include <SPI.h>
+#include "DW1000.h"
+/* Header import */
+#include "log_settings.h"
+#include "uwb_anchor.h"
+
+/* Variable ------------------------------------------------------------------*/
+char shortAdress[128]; // uwb short Adr
+char uniqueIdentifier[128]; // uwb unique identifier
+
+/* Setup  --------------------------------------------------------------------*/
+/**
+ * @brief Set up program.
+ *
+ * @date                18.02.2023
+ *
+ * @version             V0.1
+ *
+ */
+void setup()
+{
+    /* START init Logging */
+    // Start serial
+    Serial.begin(115200);
+    delay(1000); // Deley for init serial.
+    // Start logging.
+    Log.begin(DEBUG_LV, &Serial); //DEBUG_LV is defined in log_settings.h
+    /* END init Logging */
+
+    /* START init */
+    // Init UWB Module DW1000.
+    initUwb();
+    /* END init */
+    /* END init variable */
+}
+
+/* Main loop  ----------------------------------------------------------------*/
+/**
+ * @brief Main loop of program.
+ *
+ * @date                19.02.2023
+ *
+ * @version             V0.1
+ *
+ */
+void loop()
+{
+    /* START loop call */
+    uwbLoop();
+    /* END loop call */
+
+    /* START Define loop interval */
+    delay(10);
+    /* END Define loop interval */
+}

@@ -1,0 +1,120 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:icon="@drawable/ic_fragment_ble_blue"
+        app:title="@string/settings_ble_title">
+        <Preference
+            android:defaultValue="true"
+            android:key="@string/settings_ble_permission_not_accepted_key"
+            app:isPreferenceVisible="false"
+            app:title="@string/settings_default_not_show" />
+        <Preference
+            android:defaultValue="true"
+            android:key="@string/settings_ble_enable_bluetooth_key"
+            app:title="@string/settings_ble_enable_bluetooth" />
+
+        <Preference
+            android:defaultValue="@string/settings_ble_list_preference_no_device_connected"
+            android:key="@string/settings_ble_dialog_choose_device_key"
+            app:defaultValue="Rene"
+            app:dialogMessage="@string/settings_ble_choose_device"
+            app:summary="Default"
+            app:title="@string/settings_ble_choose_device" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:icon="@drawable/ic_fragment_uwb_blue"
+        app:title="@string/settings_uwb_title">
+        <SwitchPreference
+            android:key="@string/settings_uwb_manuele_devices_choice_key"
+            app:defaultValue="false"
+            app:title="@string/settings_uwb_manuele_devices_choice_auto" />
+        <EditTextPreference
+            android:key="@string/settings_uwb_short_adr_key"
+            app:dialogMessage="@string/settings_uwb_device_short_adr_example"
+            app:title="@string/settings_uwb_short_adr"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            android:key="@string/settings_uwb_uid_key"
+            app:dialogMessage="@string/settings_uwb_device_id_example"
+            app:title="@string/settings_uwb_uid"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:icon="@drawable/ic_fragment_nav_blue"
+        app:title="@string/settings_nav_title">
+
+        <SwitchPreference
+            android:key="@string/settings_nav_uwb_enable_key"
+            app:defaultValue="false"
+            app:title="@string/settings_nav_uwb_enable" />
+        <SwitchPreference
+            android:key="@string/settings_nav_ble_enable_key"
+            app:defaultValue="false"
+            app:title="@string/settings_nav_ble_enable" />
+        <ListPreference
+            android:defaultValue="GMS"
+            android:entries="@array/nav_format_entries"
+            android:entryValues="@array/nav_format_values"
+            android:key="@string/settings_nav_coordinate_format_key"
+            android:title="@string/settings_nav_coordinate_format"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:icon="@drawable/ic_fragment_csv_blue"
+        app:title="@string/settings_CSV_title">
+
+        <SwitchPreference
+            android:defaultValue=""
+            android:key="@string/settings_csv_enable_key"
+            android:title="@string/settings_csv_enable" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+            android:hint="Only letters, numbers and _ allowed"
+            android:key="@string/settings_csv_file_key"
+            android:maxLength="25"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/settings_csv_file"
+            app:dialogMessage="Attention: Only letters, numbers and _ allowed."
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+            android:hint="Only letters, numbers and _ allowed"
+            android:key="@string/settings_csv_directory_key"
+            android:maxLength="25"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/settings_csv_directory"
+            app:dialogMessage="Attention: Only letters, numbers and _ allowed."
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:digits="0123456789"
+            android:inputType="numberDecimal"
+            android:key="@string/settings_csv_number_row_key"
+            android:title="@string/settings_csv_number_row"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:digits="0123456789"
+            android:inputType="numberDecimal"
+            android:key="@string/settings_csv_interval_ms_key"
+            android:title="@string/settings_csv_interval_ms"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:digits="0123456789"
+            android:inputType="numberDecimal"
+            android:key="@string/settings_csv_time_s_key"
+            android:title="@string/settings_csv_time_s"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

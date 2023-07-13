@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/information_fragment">
+    <fragment
+        android:id="@+id/ble_fragment"
+        android:name="com.rramsauer.iotlocatiotrackerapp.ui.view.BLEFragment"
+        android:label="@string/fragment_title_ble"
+        tools:layout="@layout/fragment_ble" />
+    <fragment
+        android:id="@+id/uwb_fragment"
+        android:name="com.rramsauer.iotlocatiotrackerapp.ui.view.UWBFragment"
+        android:label="@string/fragment_title_Uwb"
+        tools:layout="@layout/fragment_uwb" />
+    <fragment
+        android:id="@+id/information_fragment"
+        android:name="com.rramsauer.iotlocatiotrackerapp.ui.view.InformationFragment"
+        android:label="@string/fragment_title_Information"
+        tools:layout="@layout/fragment_information" />
+    <fragment
+        android:id="@+id/navigate_fragment"
+        android:name="com.rramsauer.iotlocatiotrackerapp.ui.view.NavigateFragment"
+        android:label="@string/fragment_title_Navigate"
+        tools:layout="@layout/fragment_navigate" />
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.rramsauer.iotlocatiotrackerapp.ui.view.SettingsFragment"
+        android:label="@string/fragment_title_Settings" />
+
+</navigation>

@@ -1,0 +1,8 @@
+# Unit-Test
+
+Due to the size of the implementation, no test was written here.
+
+If one would like to supplement this, then a place is provided here.
+
+More information about PlatformIO Unit Testing:
+- https://docs.platformio.org/en/latest/advanced/unit-testing/index.html

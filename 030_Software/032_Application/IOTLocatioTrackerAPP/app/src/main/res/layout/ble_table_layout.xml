@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1,2,3,4">
+
+    <TableRow>
+
+        <TextView
+            android:id="@+id/ble_tableview_time"
+            android:layout_width="110dp"
+            android:layout_column="1"
+            android:layout_gravity="start"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="10dp"
+            android:textColor="#ffff"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/ble_tableview_rssi"
+            android:layout_width="70dp"
+            android:layout_column="1"
+            android:layout_gravity="start"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="10dp"
+            android:textColor="#ffff"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/ble_tableview_filtered_rssi"
+            android:layout_width="70dp"
+            android:layout_column="1"
+            android:layout_gravity="start"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="10dp"
+            android:textColor="#ffff"
+            android:textSize="14dp"></TextView>
+
+        <TextView
+            android:id="@+id/ble_tableview_distance"
+            android:layout_width="70dp"
+            android:layout_column="1"
+            android:layout_gravity="start"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="10dp"
+            android:textColor="#ffff"
+            android:textSize="14dp"></TextView>
+    </TableRow>
+
+</TableLayout>

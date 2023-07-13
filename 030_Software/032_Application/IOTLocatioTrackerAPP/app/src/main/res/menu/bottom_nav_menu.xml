@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ble_fragment"
+        android:icon="@drawable/ic_fragment_ble"
+        android:title="@string/fragment_title_ble" />
+
+    <item
+        android:id="@+id/uwb_fragment"
+        android:icon="@drawable/ic_fragment_uwb"
+        android:title="@string/fragment_title_Uwb" />
+
+    <item
+        android:id="@+id/information_fragment"
+        android:icon="@drawable/ic_fragment_information"
+        android:title="@string/fragment_title_Information" />
+
+    <item
+        android:id="@+id/navigate_fragment"
+        android:icon="@drawable/ic_fragment_navigate"
+        android:title="@string/fragment_title_Navigate" />
+
+    <item
+        android:id="@+id/settings_fragment"
+        android:icon="@drawable/ic_fragment_settings"
+        android:title="@string/fragment_title_Settings" />
+
+</menu>

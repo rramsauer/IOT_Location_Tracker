@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>1&period; Table of Contents</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+/* From extension mikkel-ol.er-syntax-highlighting */
+/* Error */
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+         <img src="file:///c:\Users\ramsa\AndroidStudioProjects\IOTLocatioTrackerAPP\img\applogo_header.png"/>
+<p>These sources are subject to the license conditions see LICENSE file.</p>
+<h1 id="1-table-of-contents">1. Table of Contents</h1>
+<ul>
+<li><a href="#1-table-of-contents">1. Table of Contents</a></li>
+<li><a href="#2-application-description">2. Application description</a>
+<ul>
+<li><a href="#21-introduction">2.1. Introduction:</a></li>
+<li><a href="#22-application-functions">2.2. Application functions:</a></li>
+<li><a href="#23-application-settings">2.3. Application settings:</a></li>
+</ul>
+</li>
+<li><a href="#3-software-architecture">3. Software architecture</a>
+<ul>
+<li><a href="#31-directory-struct">3.1. Directory struct:</a></li>
+<li><a href="#32-code-documentation">3.2. Code documentation</a></li>
+<li><a href="#33-software-block-diagram">3.3. Software block diagram</a></li>
+<li><a href="#34-implementation">3.4. Implementation</a>
+<ul>
+<li><a href="#341-user-interface">3.4.1. User interface</a></li>
+<li><a href="#342-permission-management">3.4.2. Permission management</a></li>
+<li><a href="#343-storage-live-data">3.4.3. Storage live data</a></li>
+<li><a href="#344-csvlogger">3.4.4. CSVLogger</a>
+<ul>
+<li><a href="#3441-dependencies">3.4.4.1. Dependencies</a></li>
+<li><a href="#3442-interface">3.4.4.2. Interface</a></li>
+<li><a href="#3443-constructors">3.4.4.3. Constructors</a></li>
+<li><a href="#3444-methods">3.4.4.4. Methods</a></li>
+<li><a href="#3445-usage-example">3.4.4.5. Usage Example:</a></li>
+</ul>
+</li>
+<li><a href="#345-compassassistant-3rd-party">3.4.5. CompassAssistant (3rd party)</a></li>
+<li><a href="#346-ble-scanner">3.4.6. BLE scanner</a></li>
+<li><a href="#347-ble-service">3.4.7. BLE service</a>
+<ul>
+<li><a href="#3471-dependencies">3.4.7.1. Dependencies</a></li>
+<li><a href="#3472-methods">3.4.7.2. Methods</a></li>
+</ul>
+</li>
+<li><a href="#348-usb-service">3.4.8. USB service</a>
+<ul>
+<li><a href="#3481-constructors">3.4.8.1. Constructors</a></li>
+<li><a href="#3482-methods">3.4.8.2. Methods</a></li>
+<li><a href="#3483-interface-usbserialbaudrate">3.4.8.3. <code>@interface USBSerialBaudRate</code></a></li>
+</ul>
+</li>
+<li><a href="#349-rssi-distance-calculation">3.4.9. RSSI Distance Calculation</a>
+<ul>
+<li><a href="#3491-calculatordistancerssi-class">3.4.9.1. CalculatorDistanceRSSI Class</a>
+<ul>
+<li><a href="#34911-calculatedistancemeasuredpower-rssi-n">3.4.9.1.1. <code>calculateDistance(measuredPower, rssi, n)</code></a>
+<ul>
+<li><a href="#349111-parameters">3.4.9.1.1.1. Parameters:</a></li>
+<li><a href="#349112-returns">3.4.9.1.1.2. Returns:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3410-kalman-filter-implemenatation">3.4.10. Kalman Filter Implemenatation</a>
+<ul>
+<li><a href="#34101-kalman-filter-equations">3.4.10.1. Kalman Filter Equations</a></li>
+<li><a href="#34102-kalmanfilter-class">3.4.10.2. KalmanFilter Class</a>
+<ul>
+<li><a href="#341021-constructors">3.4.10.2.1. Constructors</a></li>
+<li><a href="#341022-methods">3.4.10.2.2. Methods</a></li>
+<li><a href="#341023-properties">3.4.10.2.3. Properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3411-exdended-kalman-filter">3.4.11. Exdended Kalman Filter</a>
+<ul>
+<li><a href="#34111-mathematical-description-of-the-extended-kalman-filter">3.4.11.1. Mathematical Description of the Extended Kalman Filter</a></li>
+<li><a href="#34112-exdendedkalmanfilter-class">3.4.11.2. ExdendedKalmanFilter Class</a>
+<ul>
+<li><a href="#341121-constructor">3.4.11.2.1. Constructor</a></li>
+<li><a href="#341122-public-methods">3.4.11.2.2. Public Methods</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3412-aplication-logging">3.4.12. Aplication logging</a>
+<ul>
+<li><a href="#34121-methods">3.4.12.1. Methods</a></li>
+<li><a href="#34122-usage-example">3.4.12.2. Usage Example:</a></li>
+</ul>
+</li>
+<li><a href="#3413-average-filter">3.4.13. Average Filter</a>
+<ul>
+<li><a href="#34131-mathematical-description">3.4.13.1. Mathematical Description</a></li>
+<li><a href="#34132-averagefilter-class">3.4.13.2. AverageFilter Class</a>
+<ul>
+<li><a href="#341321-constructor">3.4.13.2.1. Constructor</a></li>
+<li><a href="#341322-addrssidouble-rssi">3.4.13.2.2. <code>addRSSI(double Rssi)</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3414-filter-with-average-and-kalman">3.4.14. Filter with average and Kalman</a>
+<ul>
+<li><a href="#34141-filterwithkalman-class">3.4.14.1. FilterWithKalman Class</a></li>
+<li><a href="#34142-constructor">3.4.14.2. Constructor</a>
+<ul>
+<li><a href="#341421-addrssidouble-rssi">3.4.14.2.1. <code>addRSSI(double Rssi)</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#3415-tracker-direction-calculation">3.4.15. Tracker direction Calculation</a>
+<ul>
+<li><a href="#34151-basics-of-the-calculation-procedure">3.4.15.1. Basics of the calculation procedure</a></li>
+<li><a href="#34152-trackerdirectioncalculator-class">3.4.15.2. TrackerDirectionCalculator Class</a>
+<ul>
+<li><a href="#341521-constructors">3.4.15.2.1. Constructors</a>
+<ul>
+<li><a href="#3415211-trackerdirectioncalculatorint-measurementcount">3.4.15.2.1.1. <code>TrackerDirectionCalculator(int measurementCount)</code></a></li>
+<li><a href="#3415212-parameters">3.4.15.2.1.2. Parameters</a></li>
+</ul>
+</li>
+<li><a href="#341522-methods">3.4.15.2.2. Methods</a>
+<ul>
+<li><a href="#3415221-addgeodouble-distance-double-latitude-double-longitude">3.4.15.2.2.1. <code>addGeo(double distance, double latitude, double longitude)</code></a></li>
+<li><a href="#3415222-parameters">3.4.15.2.2.2. Parameters</a></li>
+<li><a href="#3415223-returns">3.4.15.2.2.3. Returns</a></li>
+</ul>
+</li>
+<li><a href="#341523-defines">3.4.15.2.3. Defines</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#35-libarys-and-dependensy">3.5. Libarys and Dependensy</a></li>
+<li><a href="#36-third-party-software-and-sources">3.6. Third party software and sources</a></li>
+</ul>
+</li>
+<li><a href="#4-futur-work-and-bugs">4. Futur work and bugs</a>
+<ul>
+<li><a href="#41-bugs">4.1. Bugs</a></li>
+<li><a href="#42-futur-work">4.2. Futur Work</a></li>
+</ul>
+</li>
+<li><a href="#5-getting-started">5. Getting started</a>
+<ul>
+<li><a href="#51-install-application">5.1. Install application</a></li>
+<li><a href="#52-launch-application">5.2. Launch application</a></li>
+<li><a href="#53-references">5.3. References</a></li>
+</ul>
+</li>
+<li><a href="#6-author">6. Author</a></li>
+<li><a href="#7-copyright">7. Copyright</a></li>
+</ul>
+<h1 id="2-application-description">2. Application description</h1>
+<h2 id="21-introduction">2.1. Introduction:</h2>
+<p>The application consists of 5 graphical interfaces. All settings and configurations can be made in the 5 ui-interface (Settings). All other surfaces are intended only for the graphical representation of the data.</p>
+<img src="file:///c:\Users\ramsa\AndroidStudioProjects\IOTLocatioTrackerAPP\img\APP_Screen_overview.png"/>
+<p>You can navigate between the individual surfaces using the BottomNavigationBar : <img src="file:///c:\Users\ramsa\AndroidStudioProjects\IOTLocatioTrackerAPP\img\App_Screen_BottomNavigationBar.png" height="30"/> .</p>
+<h2 id="22-application-functions">2.2. Application functions:</h2>
+<p><strong>The application has three main functionalities:</strong></p>
+<ol>
+<li>acquisition and evaluation of measurement data.
+<ul>
+<li>This application acquires and evaluates data such as: &quot;RSSI via BLE and UWB, TOA via UWB, distance to a device via BLE and UWB, GBS, axiometer and magnetometer&quot;.</li>
+</ul>
+</li>
+<li>graphical display of the measurement data.
+<ul>
+<li>The measured data is graphically processed and made available to the user in the form of various interfaces.</li>
+</ul>
+</li>
+<li>recording of measurement data via &quot;.csv&quot;.
+<ul>
+<li>Furthermore, the user is enabled to write the measured and evaluated data into a CSV file.</li>
+</ul>
+</li>
+</ol>
+<h2 id="23-application-settings">2.3. Application settings:</h2>
+<p><strong>The application has four settings groups:</strong></p>
+<ol>
+<li>
+<p>BLE Settings</p>
+ <img src="file:///c:\Users\ramsa\AndroidStudioProjects\IOTLocatioTrackerAPP\img\App_Screen_Settings_BLE.png" width="500"/>
+<p>When the BLE switch is off, the BLE name of the device to be tracked can be selected (via the Coose BLE devices button). The connection with the Bloetooht device can be established via the BLE Enable button.</p>
+</li>
+<li>
+<p>UWB Settings</p>
+ <img src="file:///c:\Users\ramsa\AndroidStudioProjects\IOTLocatioTrackerAPP\img\App_Screen_Settings_UWB.png" width="400"/>
+ <img src="file:///c:\Users\ramsa\AndroidStudioProjects\IOTLocatioTrackerAPP\img\Connect_to_mcrocontroller.png" width="300"/>
+<p>If Bluetooth is switched off on the mobile device, this is indicated in the settings. If the user then presses the button, a broadcast is sent to the operating system, and the operating system switches the Bluetooth on. After the Bluetooth is switched on, it is possible for the user to search for devices. The selected device will be saved. Consequently, after restarting the application, the system reconnects to the device. If this is not desired, click on the button agin.</p>
+</li>
+<li>
+<p>Navigation Settings.</p>
+ <img src="file:///c:\Users\ramsa\AndroidStudioProjects\IOTLocatioTrackerAPP\img\App_Screen_Settings_NAV.png" width="200"/>
+<p>In the navigation settings, the measurement method for determining the direction of the device in the navigation fragment can be selected. If UWB and BLE are not selected, the pointer in the NAV UI shows the direction to the N pole (compass). (Compass) In addition, the display format of the coordinates in the NAV UI can be set. (GSM, GMM, DG)</p>
+</li>
+<li>
+<p>CSV Settings.</p>
+ <img src="file:///c:\Users\ramsa\AndroidStudioProjects\IOTLocatioTrackerAPP\img\App_Screen_Settings_CSV.png" width="400"/>
+<p>Under the heading CSV settings you can configure the behavior of the Csv logger. And with the switch Activate measurement data the CSV logger can be activated. After activating the CSV logger, it will write data to a CSV file until the time has expired or the process is aborted. (Please note that Android can only process data sizes &gt;2GB very slowly). For data larger than 2GB, it is recommended to split it into multiple files. You can do this with the setting &quot;Select number of lines per file&quot;. Furthermore, the starting and stopping of the CSV logger is indicated with a small popup.</p>
+</li>
+</ol>
+<h1 id="3-software-architecture">3. Software architecture</h1>
+<h2 id="31-directory-struct">3.1. Directory struct:</h2>
+<pre><code class="language-txt">.
+└── 030_Software/032_Application/IOTLocatioTrackerAPP/
+    ├── .gradle/
+    ├── .idea/
+    ├── app/
+    │   ├── build/
+    │   ├── libs/
+    │   ├── src/
+    │   │   ├── androidTest/
+    │   │   ├── debug/
+    │   │   ├── main\java\com\rramsauer\iotlocatiotrackerapp/
+    │   │   │   ├── enviromment/
+    │   │   │   │   └── ...
+    │   │   │   ├── services/
+    │   │   │   │   ├── ble/
+    │   │   │   │   │   └── ...
+    │   │   │   │   └── usb/
+    │   │   │   │       └── ...
+    │   │   │   ├── storage/
+    │   │   │   │   ├── csv/
+    │   │   │   │   │   └── ...
+    │   │   │   │   └── state/
+    │   │   │   │       └── ...
+    │   │   │   ├── ui/
+    │   │   │   │   ├── adapter/
+    │   │   │   │   │   └── ...
+    │   │   │   │   ├── view/
+    │   │   │   │   │   └── ...
+    │   │   │   │   ├── preference/
+    │   │   │   │   │   └── ...
+    │   │   │   │   └── models/
+    │   │   │   │       └── ...
+    │   │   │   ├── util/
+    │   │   │   │   └── ...
+    │   │   │   └── MainActivity.java
+    │   │   └── test/
+    │   │       └── ..
+    │   ├── .gitignore
+    │   ├── build.gradle
+    │   └── proguard-rules.pro
+    ├── gradle/
+    ├── img/
+    │   └── ... (Image for Readme)
+    ├── vpproject/
+    │   └── IOTLocatioTrackerAPP.vpp
+    ├── .gitignore
+    ├── build.gradle
+    ├── gradle.properties
+    ├── gradlew
+    ├── gradlew.bat
+    ├── local.properties
+    ├── README.html
+    ├── README.md
+    └── settings.gradle
+</code></pre>
+<h2 id="32-code-documentation">3.2. Code documentation</h2>
+<p>All source code was documented with javadoc. <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">More Information</a></p>
+<h2 id="33-software-block-diagram">3.3. Software block diagram</h2>
+<img src="file:///c:\Users\ramsa\AndroidStudioProjects\IOTLocatioTrackerAPP\img\Software_block_diagram.png" width="700"/>
+<h2 id="34-implementation">3.4. Implementation</h2>
+<h3 id="341-user-interface">3.4.1. User interface</h3>
+<p>The user interface was implemented with Androidx, AppCompatActivity and Fragments. For the implementation of the fragments a model-view implentation was used to ensure maximum flexibility. Furthermore, for the use of constants, the xml resources recommended by androit were used.
+(e.g.: res/values/strings.xml).</p>
+<h3 id="342-permission-management">3.4.2. Permission management</h3>
+<p>All permissions are managed in AppPermmissionManager. If a new permission is needed in the app, it should be added to the <code>AppPermissionsManager</code> class in the <code>addPermissionToPermissionList</code> function and in the Manifest.xml.
+For example:
+<em>AppPermissionsManager</em></p>
+<pre><code class="language-java"><span class="hljs-meta">@Retention(RetentionPolicy.SOURCE)</span>
+<span class="hljs-meta">@IntDef({...,YOUR_PERMISSION_GROUP})</span>
+<span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> PermissionTyp {}
+<span class="hljs-comment">/* Define permission-group typ */</span>
+...
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> <span class="hljs-variable">YOUR_PERMISSION_GROUP</span> <span class="hljs-operator">=</span> <span class="hljs-number">100</span>;
+
+....
+<span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">addPermissionToPermissionList</span><span class="hljs-params">()</span>{
+    ...
+    permissionList.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">AppPermission</span>(Manifest.permission.YOUR_PERMISSION,YOUR_PERMISSION_GROUP));
+}
+...
+</code></pre>
+<p><em>AndroidManifest.xml</em></p>
+<pre><code class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">uses-permission</span> <span class="hljs-attr">android:name</span>=<span class="hljs-string">&quot;android.permission.YOUR_PERMISSION&quot;</span> /&gt;</span>
+</code></pre>
+<h3 id="343-storage-live-data">3.4.3. Storage live data</h3>
+<p>All live data is stored and read out in a threadsave singelton opject. (../storage/state/ActualMeasuringData)</p>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ActualMeasuringData</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Serializable</span> {
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">ActualMeasuringData</span> <span class="hljs-variable">INSTANCE</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;
+    <span class="hljs-comment">/* Bluetooth LE */</span>
+    <span class="hljs-keyword">private</span> String bleDeviceName;
+    <span class="hljs-keyword">private</span> String bleDeviceId;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> bleRssi;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> bleRssiFiltered;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> bleDistance;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> bleDirection;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">boolean</span> bleDeviceIsConnected;
+    <span class="hljs-comment">/* Ultra-Wide-band */</span>
+    <span class="hljs-keyword">private</span> String uwbDeviceShortAddress;
+    <span class="hljs-keyword">private</span> String uwbDeviceUid;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> uwbRssi;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> uwbRssiFiltered;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> uwbDistanceToa;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> uwbDistanceRssi;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> uwbDirection;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">boolean</span> uwbDeviceIsConnected;
+    <span class="hljs-comment">/* Navigation */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> deviceDirection;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> deviceGeoDirection;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> deviceMovementDirection;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> deviceCoordinateLongitudeDG; <span class="hljs-comment">/* N - S */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-type">double</span> deviceCoordinateLatitudeDG; <span class="hljs-comment">/* E - W */</span>
+    <span class="hljs-keyword">private</span> Location deviceLocation;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> ActualMeasuringData <span class="hljs-title function_">getInstance</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">if</span> (INSTANCE == <span class="hljs-literal">null</span>) {
+            <span class="hljs-keyword">synchronized</span> (ActualMeasuringData.class) {
+                <span class="hljs-keyword">if</span> (INSTANCE == <span class="hljs-literal">null</span>) {
+                    INSTANCE=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ActualMeasuringData</span>();
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> INSTANCE;
+    }
+
+    <span class="hljs-comment">/* Getter */</span>
+    ...
+
+    <span class="hljs-comment">/* Setter */</span>
+    ...
+}
+</code></pre>
+<h3 id="344-csvlogger">3.4.4. CSVLogger</h3>
+<p>The CsvLogger class provides a service that allows writing data in a previously defined interval for a previously defined time. All settings like file name, directory, logging interval, number of rows per file, and recording time are passed via the constructor.</p>
+<h4 id="3441-dependencies">3.4.4.1. Dependencies</h4>
+<p>This class requires the following Gradler imports:</p>
+<pre><code>implementation 'com.opencsv:opencsv:5.7.1'
+</code></pre>
+<p>The class also needs the following classes:</p>
+<pre><code>com.rramsauer.iotlocatiotrackerapp.util.conv.StringConverter
+com.rramsauer.iotlocatiotrackerapp.util.storage.FileManagementHelper
+</code></pre>
+<p>To use this class, the following permissions must be included in the <code>AndroidManifest.xml</code> file:</p>
+<pre><code>&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.WAKE_LOCK&quot; /&gt;
+</code></pre>
+<h4 id="3442-interface">3.4.4.2. Interface</h4>
+<p>The <code>CsvLogger</code> class also has an interface named <code>CsvLoggerWriter</code>, which allows capturing and writing data line by line. The <code>CsvLoggerWriter</code> interface has three methods:</p>
+<ul>
+<li><code>onCsvLoggerStarted()</code>: This method is called when the CSV logger is started.</li>
+<li><code>onRunCsvLogger()</code>: This method is called every iteration when the CSV logger is running. This method is used to pass the data for one line. It returns the data in the form of a java stateful bean object.</li>
+<li><code>onCsvLoggerStopped()</code>: This method is called when the CSV logger is stopped.</li>
+</ul>
+<h4 id="3443-constructors">3.4.4.3. Constructors</h4>
+<ul>
+<li><code>CsvLoggerWriter()</code>: The constructor initializes a <code>CsvLogger</code> instance with the following parameters:
+<ul>
+<li><code>l</code>: An instance of the <code>CsvLoggerWriter</code> interface.</li>
+<li><code>csvDirectoryName</code>: The name of the directory where the CSV file is stored.</li>
+<li><code>csvFileName</code>: The name of the CSV file.</li>
+<li><code>loggingInterval</code>: The logging interval in milliseconds.</li>
+<li><code>numberOfRowPerFile</code>: The maximum number of rows per file.</li>
+<li><code>recordingTime</code>: The recording time in seconds.</li>
+</ul>
+</li>
+</ul>
+<h4 id="3444-methods">3.4.4.4. Methods</h4>
+<ul>
+<li><code>start()</code>: This method starts the CSV logger.</li>
+<li><code>stop()</code>: This method stops the CSV logger.</li>
+<li><code>writeCsv()</code>: This method writes a single row to the CSV file.</li>
+<li><code>getDurationInSecond()</code>: This method returns the duration of the recording in seconds.</li>
+</ul>
+<h4 id="3445-usage-example">3.4.4.5. Usage Example:</h4>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MainActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Activity</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">CsvLogger</span>.CsvLoggerWriter&lt;CsvStatefulBean&gt; {
+
+      <span class="hljs-meta">@Override</span>
+      <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onCreate</span><span class="hljs-params">(<span class="hljs-meta">@Nullable</span> Bundle savedInstanceState)</span> {
+            <span class="hljs-built_in">super</span>.onCreate(savedInstanceState);
+            <span class="hljs-built_in">this</span>.compass = (ImageView) findViewById(R.id.csv_view);
+      }
+
+      <span class="hljs-meta">@Override</span>
+      <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onResume</span><span class="hljs-params">()</span> {
+            <span class="hljs-built_in">super</span>.onResume();
+            <span class="hljs-comment">// INIT CSV-Logger</span>
+            csvLogger = <span class="hljs-keyword">new</span> <span class="hljs-title class_">CsvLogger</span>&lt;CsvStatefulBean&gt;(
+                  <span class="hljs-built_in">this</span>,
+                  Environment.getExternalStorageDirectory().getPath() + <span class="hljs-string">&quot;/Test/&quot;</span>,   <span class="hljs-comment">/* parentDirectory:String */</span>
+                  <span class="hljs-string">&quot;test.csv&quot;</span>,                                                       <span class="hljs-comment">/* csvFileName:String */</span>
+                  <span class="hljs-number">10</span>,                                                               <span class="hljs-comment">/* loggingInterval:int */</span>
+                  <span class="hljs-number">10000</span>,                                                            <span class="hljs-comment">/* numberOfRow:int */</span>
+                  <span class="hljs-number">15</span>                                                                <span class="hljs-comment">/* recordingTime:int */</span>
+            );
+            <span class="hljs-comment">/* Start CSV-Logger*/</span>
+            csvLogger.start();    
+      }
+
+      <span class="hljs-meta">@Override</span>
+      <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onPause</span><span class="hljs-params">()</span> {
+            <span class="hljs-comment">// Stop CSV-Logger</span>
+            csvLogger.stop();
+      }
+
+      <span class="hljs-comment">/** This function override onCsvLoggerStarted()
+      * <span class="hljs-doctag">@author</span> Ramsauer René
+      * <span class="hljs-doctag">@override</span> onCsvLoggerStarted of class CsvLogger
+      */</span>
+      <span class="hljs-meta">@Override</span>
+      <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onCsvLoggerStarted</span><span class="hljs-params">()</span> {
+      }
+
+      <span class="hljs-comment">/** This function override onRunCsvLogger()
+      * <span class="hljs-doctag">@author</span> Ramsauer René
+      * <span class="hljs-doctag">@override</span> onRunCsvLogger of class CsvLogger
+      */</span>
+      <span class="hljs-meta">@Override</span>
+      <span class="hljs-keyword">public</span> CsvStatefulBean <span class="hljs-title function_">onRunCsvLogger</span><span class="hljs-params">()</span> {
+            <span class="hljs-type">ActualData</span> <span class="hljs-variable">tempLiveData</span> <span class="hljs-operator">=</span> ActualData.getInstance();
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">CsvStatefulBean</span>(
+                  <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>(),                           <span class="hljs-comment">/* time:Date */</span>
+                  tempLiveData.getBleDeviceName(),      <span class="hljs-comment">/* bleDeviceName:String */</span>
+                  tempLiveData.getBleDeviceId(),        <span class="hljs-comment">/* bleDeviceId:String */</span>
+                  tempLiveData.getBleRssi(),            <span class="hljs-comment">/* bleDeviceId:String */</span>
+                  tempLiveData.getBleDistance(),        <span class="hljs-comment">/* bleDistance:Double */</span>
+                  tempLiveData.getBleDirection(),       <span class="hljs-comment">/* bleDirection:Double */</span>
+                  ...
+            );
+      }
+
+    <span class="hljs-comment">/** This function override onCsvLoggerStopped()
+     * <span class="hljs-doctag">@author</span> Ramsauer René
+     * <span class="hljs-doctag">@override</span> onCsvLoggerStopped of class CsvLogger
+     */</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onCsvLoggerStopped</span><span class="hljs-params">()</span> {
+    }
+
+}
+</code></pre>
+<h3 id="345-compassassistant-3rd-party">3.4.5. CompassAssistant (3rd party)</h3>
+<p>For the implementation of the compass, due to various complications, an implementation by Artur Hellmann was used, as it could show good experience values in the network. However, this should be revised and improved in the future to make a more accurate statement about the measurement.
+Usage Example:</p>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CompassActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Activity</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">CompassAssistant</span>.CompassAssistantListener {
+
+    <span class="hljs-keyword">private</span> CompassAssistant CompassAssistant;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">float</span> currentDegree;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onCreate</span><span class="hljs-params">(<span class="hljs-meta">@Nullable</span> Bundle savedInstanceState)</span> {
+        <span class="hljs-built_in">super</span>.onCreate(savedInstanceState);
+        <span class="hljs-built_in">this</span>.compass = (ImageView) findViewById(R.id.compass_view);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onResume</span><span class="hljs-params">()</span> {
+        <span class="hljs-built_in">super</span>.onResume();
+
+        <span class="hljs-comment">// this assistant will point to the magnetic north. If you want to have a compass that points</span>
+        <span class="hljs-comment">// to the geographic north, you have to put a location into the constructor.</span>
+        CompassAssistant = <span class="hljs-keyword">new</span> <span class="hljs-title class_">CompassAssistant</span>(CompassActivity.<span class="hljs-built_in">this</span>);
+        CompassAssistant.addListener(CompassActivity.<span class="hljs-built_in">this</span>);
+        CompassAssistant.start();
+            
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onPause</span><span class="hljs-params">()</span> {
+        <span class="hljs-built_in">super</span>.onPause();
+        <span class="hljs-built_in">this</span>.CompassAssistant.stop();
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onNewDegreesToNorth</span><span class="hljs-params">(<span class="hljs-type">float</span> degrees)</span> {
+        <span class="hljs-comment">// this is not used here because we want to have a smooth moving compass.</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onNewSmoothedDegreesToNorth</span><span class="hljs-params">(<span class="hljs-type">float</span> degrees)</span> {
+
+        <span class="hljs-keyword">final</span> <span class="hljs-type">RotateAnimation</span> <span class="hljs-variable">ra</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RotateAnimation</span>(
+                currentDegree,
+                degrees,
+                Animation.RELATIVE_TO_SELF, <span class="hljs-number">0.5f</span>,
+                Animation.RELATIVE_TO_SELF,
+                <span class="hljs-number">0.5f</span>);
+        ra.setDuration(<span class="hljs-number">210</span>);
+        ra.setFillAfter(<span class="hljs-literal">true</span>);
+
+        <span class="hljs-built_in">this</span>.runOnUiThread(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Runnable</span>() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> {
+                compass.startAnimation(ra);
+            }
+        });
+
+        currentDegree = degrees;
+
+        <span class="hljs-comment">/*
+        If you want you can get the bearing between two locations right here. 
+        If you do this in this function you can be sure that the compassassistant is started and
+        you will get continously new degrees:
+        
+        float bearing = assistant.getBearingBetweenLocations(currLocLat, currLocLng, destLocLat, destLocLng);
+
+        */</span>
+
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onCompassStopped</span><span class="hljs-params">()</span> {
+        <span class="hljs-comment">// the compass has stopped. Do maybe </span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onCompassStarted</span><span class="hljs-params">()</span> {
+        <span class="hljs-comment">// you can do things here for example if you want to hide a loading indicator.</span>
+    }
+}
+</code></pre>
+<p><a href="https://github.com/klein-artur/Simple-Android-Compass-Assistant/blob/master/README.html">More Information</a></p>
+<h3 id="346-ble-scanner">3.4.6. BLE scanner</h3>
+<p>The Bluetooth low energy scanner is implemented in the class BTLE_Service. This class can be easily initialized with a constructor. Then the scanner including the UI can be started with the function call start(). The scanner can only find devices that also have the Suppoerted Services, these can be specified in the <code>btle_supported_gatt_attributes.xml</code>.
+Supported Services must be entered in the <code>btle_supported_gatt_attributes.xml</code> as follows:</p>
+<pre><code class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">service</span> <span class="hljs-attr">uuid</span>=<span class="hljs-string">&quot;....&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;...&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">characteristic</span> <span class="hljs-attr">uuid</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;...&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">characteristic</span> <span class="hljs-attr">uuid</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;...&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">service</span>&gt;</span>
+</code></pre>
+<h3 id="347-ble-service">3.4.7. BLE service</h3>
+<p>The <code>BTLE_Service</code> class is responsible for managing the Bluetooth Low Energy (BLE) connection with a peripheral device. It provides a remote RSSI listener that can be used to receive real-time updates on the received signal strength indicator (RSSI) of the connected peripheral device. The class implements the <code>Service</code> interface, which means that it runs in the background and can be accessed from other components of an Android application.</p>
+<h4 id="3471-dependencies">3.4.7.1. Dependencies</h4>
+<p>The class also needs the following classes:</p>
+<pre><code>com.rramsauer.iotlocatiotrackerapp.MainActivity;
+com.rramsauer.iotlocatiotrackerapp.util.calc.distance.CalculatorDistanceRSSI;
+com.rramsauer.iotlocatiotrackerapp.util.calc.filter.KalmanFilter;
+com.rramsauer.iotlocatiotrackerapp.util.calc.filter.SmoothWithAverage;
+com.rramsauer.iotlocatiotrackerapp.util.log.Logger;
+com.rramsauer.iotlocatiotrackerapp.util.str.StringFormatCheck;
+</code></pre>
+<p>To use this class, the following permissions must be included in the <code>AndroidManifest.xml</code> file:</p>
+<pre><code>&lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADMIN&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt;
+</code></pre>
+<h4 id="3472-methods">3.4.7.2. Methods</h4>
+<ul>
+<li><code>onCreate()</code>: This method is called when the service is created.</li>
+<li><code>onBind(Intent intent)</code>: This method is called when a component binds to the service.</li>
+<li><code>onStartCommand(Intent intent, int flags, int startId)</code>: This method is called when the service is started.</li>
+<li><code>onDestroy()</code>: This method is called when the service is destroyed.</li>
+<li><code>connect(String address)</code>: This method is used to connect to a peripheral device with the given Bluetooth device address.</li>
+<li><code>disconnect()</code>: This method is used to disconnect from the currently connected peripheral device.</li>
+<li><code>broadcastUpdate(final String action)</code>: This method sends a broadcast with the given action identifier to all registered receivers.</li>
+<li><code>onNewRssi( BluetoothGatt gatt, double rssi, double rssiFiltered, double distanc, int status )</code>: This method is provide with a inheritance interface (<code>RemoteRssiListener</code>) and implements an RSSI-listener.</li>
+</ul>
+<h3 id="348-usb-service">3.4.8. USB service</h3>
+<p>The <code>UsbSerialReader</code> class is a Java class that implements the <code>ArduinoListener</code> interface to handle data read from an Arduino device connected via USB. This class is responsible for initializing the communication with the device, parsing the data received from the device, and updating the <code>ActualMeasuringData</code> singleton object with the parsed data.</p>
+<h4 id="3481-constructors">3.4.8.1. Constructors</h4>
+<p>The <code>UsbSerialReader</code> class has two constructors:</p>
+<ul>
+<li><code>UsbSerialReader(android.content.Context context, @UsbSerialReader.USBSerialBaudRate final int baudRate)</code>: Constructs a new <code>UsbSerialReader</code> object with the specified context and baud rate.</li>
+<li><code>UsbSerialReader(android.content.Context context, @UsbSerialReader.USBSerialBaudRate final int baudRate, int vendorId)</code>: Constructs a new <code>UsbSerialReader</code> object with the specified context, baud rate, and vendor ID. This constructor is used if the USB device is not an Arduino device.</li>
+</ul>
+<h4 id="3482-methods">3.4.8.2. Methods</h4>
+<p>The <code>UsbSerialReader</code> class has the following methods:</p>
+<ul>
+<li><code>init(Context context, int baudRate)</code>: Initializes the communication with the USB device.</li>
+<li><code>init(Context context, int baudRate, int vendorId)</code>: Initializes the communication with the USB device. This method is used if the USB device is not an Arduino device.</li>
+<li><code>getValueOfMeasuringString(String measuringString)</code>: Parses the measuring string received from the Arduino device and returns a <code>UsbSerialMessageData</code> object containing the parsed data.</li>
+<li><code>setListener()</code> : Sets the listener for read serial data from usb device.</li>
+<li><code>close()</code> : Closes the UsbSerialReader and sets the UWB device as disconnected.</li>
+<li><code>setUwbShortAddress(String uwbShortAddress)</code> : Sets the UWB short address of the follower.</li>
+</ul>
+<h4 id="3483-interface-usbserialbaudrate">3.4.8.3. <code>@interface USBSerialBaudRate</code></h4>
+<p>Defines the available baud rates for USB serial communication. The following constants are available:</p>
+<ul>
+<li><code>BAUD_RATE_300</code></li>
+<li><code>BAUD_RATE_1200</code></li>
+<li><code>BAUD_RATE_2400</code></li>
+<li><code>BAUD_RATE_4800</code></li>
+<li><code>BAUD_RATE_9600</code></li>
+<li><code>BAUD_RATE_19200</code></li>
+<li><code>BAUD_RATE_38400</code></li>
+<li><code>BAUD_RATE_57600</code></li>
+<li><code>BAUD_RATE_74880</code></li>
+<li><code>BAUD_RATE_115200</code></li>
+<li><code>BAUD_RATE_230400</code></li>
+<li><code>BAUD_RATE_250000</code></li>
+</ul>
+<h3 id="349-rssi-distance-calculation">3.4.9. RSSI Distance Calculation</h3>
+<h4 id="3491-calculatordistancerssi-class">3.4.9.1. CalculatorDistanceRSSI Class</h4>
+<p>The <code>CalculatorDistanceRSSI</code> class provides a static method to calculate distance using RSSI values.</p>
+<h5 id="34911-calculatedistancemeasuredpower-rssi-n">3.4.9.1.1. <code>calculateDistance(measuredPower, rssi, n)</code></h5>
+<p>Thsi methode is based on the * Friis transmission equation* and is commonly used in RSSI distance measurement. This calculation is also called the <em>Log-Distance Path Loss Model</em> and is a common method for distance estimation with RSSI.
+Three variables are needed for the formula: the measured value, the measured value at one meter distance, and the path loss exponent. The path loss exponent should be between 1 and 4, depending on the measurement environment (e.g., indoor or outdoor, frequency, and other factors). We man aus den Paper [7] [8]</p>
+<p class="katex-block katex-error" title="d = 10^{(TxPower - RSSI) \over (10 * n)} $$(1)
+
+- $TxPower$: the transmit power of the transmitter in dBm (decibel-milliwatt)
+- $RSSI$: the received signal strength indicator in dBm
+- $n$: the path-loss exponent, which depends on the environment (e.g., indoor or outdoor), frequency, and other factors. It typically ranges from 2 to 4.
+
+###### 3.4.9.1.1.1. Parameters:
+
+- `measuredPower`: The measured power value (double)
+- `n`: The path-loss exponent value (double)
+- `rssi`: The received signal strength indicator (RSSI) value (double)
+
+
+###### 3.4.9.1.1.2. Returns:
+- The distace in meters (double)
+
+### 3.4.10. Kalman Filter Implemenatation
+
+The implementation of the Kalman filter is a third party implementation. See **Third party software and sources table** [5].
+
+#### 3.4.10.1. Kalman Filter Equations
+The Kalman filter is designed to work with linear systems, where the system dynamics can be modeled using linear equations and is the optimal solution for filtered Rssi. [1] [2] [3]
+
+| Formulas | Description |
+| --- | --- |
+">ParseError: KaTeX parse error: Can&#039;t use function &#039;$&#039; in math mode at position 42: …over (10 * n)} $̲$(1)
+
+- $TxPowe…</p>
+<p>| <p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mi>P</mi><mi>k</mi><mo>−</mo></msubsup><mo>=</mo><msub><mi>F</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><msub><mi>P</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><msubsup><mi>F</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow><mi>T</mi></msubsup><mo>+</mo><msub><mi>Q</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">P_k^- = F_{k-1} P_{k-1} F_{k-1}^T + Q_{k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.2914em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1967em;vertical-align:-0.3053em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.453em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3053em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+(4) | Calculate the predicted error covariance matrix at time k |
+| <p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>y</mi><mi>k</mi></msub><mo>=</mo><msub><mi>z</mi><mi>k</mi></msub><mo>−</mo><msub><mi>H</mi><mi>k</mi></msub><msubsup><mover accent="true"><mi>x</mi><mo>^</mo></mover><mi>k</mi><mo>−</mo></msubsup></mrow><annotation encoding="application/x-tex">y_k = z_k - H_k\hat{x}_k^-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.044em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.2914em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+(5) | Calculate the novelty at time k |
+| <p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mi>k</mi></msub><mo>=</mo><msub><mi>H</mi><mi>k</mi></msub><msubsup><mi>P</mi><mi>k</mi><mo>−</mo></msubsup><msubsup><mi>H</mi><mi>k</mi><mi>T</mi></msubsup><mo>+</mo><msub><mi>R</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">S_k = H_k P_k^- H_k^T + R_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1828em;vertical-align:-0.2914em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.453em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+(7) | Calculate the innovation covariance matrix at time k based on the predicted error |
+| <p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>K</mi><mi>k</mi></msub><mo>=</mo><msubsup><mi>P</mi><mi>k</mi><mo>−</mo></msubsup><msubsup><mi>H</mi><mi>k</mi><mi>T</mi></msubsup><msubsup><mi>S</mi><mi>k</mi><mrow><mo>−</mo><mn>1</mn></mrow></msubsup></mrow><annotation encoding="application/x-tex">K_k = P_k^- H_k^T S_k^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1828em;vertical-align:-0.2914em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.453em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-2.4086em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+(8) | Compute the Kalman gain at time k  |
+| <p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mover accent="true"><mi>x</mi><mo>^</mo></mover><mi>k</mi></msub><mo>=</mo><msubsup><mover accent="true"><mi>x</mi><mo>^</mo></mover><mi>k</mi><mo>−</mo></msubsup><mo>+</mo><msub><mi>K</mi><mi>k</mi></msub><msub><mi>y</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">\hat{x}_k = \hat{x}_k^- + K_k y_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.2914em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+(9) | Update the state estimate at time k |
+| <p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>P</mi><mi>k</mi></msub><mo>=</mo><mo stretchy="false">(</mo><mi>I</mi><mo>−</mo><msub><mi>K</mi><mi>k</mi></msub><msub><mi>H</mi><mi>k</mi></msub><mo stretchy="false">)</mo><msubsup><mi>P</mi><mi>k</mi><mo>−</mo></msubsup></mrow><annotation encoding="application/x-tex">P_k = (I - K_k H_k) P_k^-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.2914em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+(10) | Update the error covariance matrix at time k  |</p>
+<p>Description of the variables used in the formulas:</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mover accent="true"><mi>x</mi><mo>^</mo></mover><mi>k</mi><mo>−</mo></msubsup></mrow><annotation encoding="application/x-tex">\hat{x}_k^-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.3013em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8115em;"><span style="top:-2.3987em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.1031em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3013em;"><span></span></span></span></span></span></span></span></span></span>: predicted state estimate at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover accent="true"><mi>x</mi><mo>^</mo></mover><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">\hat{x}_{k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9028em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>: state estimate at time k-1</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">u_{k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6389em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>: control input at time k-1</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">F_{k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>: state transition matrix at time k-1</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">B_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: control input matrix at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>P</mi><mi>k</mi><mo>−</mo></msubsup></mrow><annotation encoding="application/x-tex">P_k^-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.3013em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8115em;"><span style="top:-2.3987em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.1031em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3013em;"><span></span></span></span></span></span></span></span></span></span>: predicted error covariance matrix at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">Q_{k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>: process noise covariance matrix at time k-1</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">z_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.044em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: measurement at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">H_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: measurement matrix at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">y_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: innovation at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">R_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: measurement noise covariance matrix at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">S_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: innovation covariance matrix at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">K_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: Kalman gain at time k</li>
+</ul>
+<h4 id="34102-kalmanfilter-class">3.4.10.2. KalmanFilter Class</h4>
+<p>The <code>KalmanFilter</code>[7] class is an implementation of the Kalman filter algorithm. The class allows for the creation of a Kalman filter with specified values for the process noise and measurement noise, as well as optional values for the state vector, control vector, and measurement vector.</p>
+<h5 id="341021-constructors">3.4.10.2.1. Constructors</h5>
+<p>The <code>KalmanFilter</code> class has two constructors:</p>
+<ul>
+<li><code>KalmanFilter(double r, double q, double a, double b, double c)</code>: creates a new Kalman filter with specified values for:
+<ul>
+<li>the process noise <code>r</code>,</li>
+<li>measurement noise <code>q</code>,</li>
+<li>state vector <code>a</code>,</li>
+<li>control vector <code>b</code>,</li>
+<li>measurement vector <code>c</code>.</li>
+</ul>
+</li>
+<li><code>KalmanFilter(double r, double q)</code>: creates a new Kalman filter with specified values for
+<ul>
+<li>the process noise <code>r</code>
+measurement noise <code>q</code>
+<strong>(This constructor is used in this project)</strong></li>
+</ul>
+</li>
+</ul>
+<h5 id="341022-methods">3.4.10.2.2. Methods</h5>
+<p>The <code>KalmanFilter</code> class has three methods:</p>
+<ul>
+<li><code>applyFilter(double rssi)</code>: applies the Kalman filter to a measurement with default control value of <code>0.0</code>.</li>
+<li><code>applyFilter(double measurement, double u)</code>: applies the Kalman filter to a measurement with a control value <code>u</code>.</li>
+<li><code>toString()</code>: returns a string representation of the <code>KalmanFilter</code> object.</li>
+</ul>
+<h5 id="341023-properties">3.4.10.2.3. Properties</h5>
+<p>The <code>KalmanFilter</code> class has the following properties:</p>
+<ul>
+<li><code>R</code>: the process noise.</li>
+<li><code>Q</code>: the measurement noise.</li>
+<li><code>A</code>: the state vector.</li>
+<li><code>B</code>: the control vector.</li>
+<li><code>C</code>: the measurement vector.</li>
+<li><code>x</code>: the filtered measurement value (no noise).</li>
+<li><code>cov</code>: the covariance.</li>
+</ul>
+<h3 id="3411-exdended-kalman-filter">3.4.11. Exdended Kalman Filter</h3>
+<p>The extended Kalman filter is designed to work with nonlinear systems.  Since the RSSI value has a non-linear behavior with respect to the distance, theoretically this filter would be more suitable. In this experiment, however, no better result could be achieved, so the implementation of the class was removed and the normal Kalman filter was implemented.
+Die matematische beschreibung wurde aus den folgenden Paper entnommen. [9]</p>
+<p><strong>This class is currently not in use but is available in the directory &quot;util&quot;.</strong></p>
+<h4 id="34111-mathematical-description-of-the-extended-kalman-filter">3.4.11.1. Mathematical Description of the Extended Kalman Filter</h4>
+<table>
+<thead>
+<tr>
+<th>Formulas</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mover accent="true"><mi>x</mi><mo>^</mo></mover><mi>k</mi><mo>−</mo></msubsup><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><msub><mover accent="true"><mi>x</mi><mo>^</mo></mover><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo separator="true">,</mo><msub><mi>u</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\hat{x}_k^- = f(\hat{x}_{k-1}, u_{k-1})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.2914em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+(11)</td>
+<td>Prediction step: Estimate the state at time k given the estimate at time k-1 and the control input u at time k-1 using the nonlinear function f</td>
+</tr>
+<tr>
+<td><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msubsup><mi>P</mi><mi>k</mi><mo>−</mo></msubsup><mo>=</mo><msub><mi>F</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><msub><mi>P</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub><msubsup><mi>F</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow><mi>T</mi></msubsup><mo>+</mo><msub><mi>Q</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">P_k^- = F_{k-1} P_{k-1} F_{k-1}^T + Q_{k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.2914em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1967em;vertical-align:-0.3053em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.453em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3053em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+(12)</td>
+<td>Calculate the predicted error covariance matrix at time k</td>
+</tr>
+<tr>
+<td><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>y</mi><mi>k</mi></msub><mo>=</mo><msub><mi>z</mi><mi>k</mi></msub><mo>−</mo><mi>h</mi><mo stretchy="false">(</mo><msubsup><mover accent="true"><mi>x</mi><mo>^</mo></mover><mi>k</mi><mo>−</mo></msubsup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">y_k = z_k - h(\hat{x}_k^-)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.044em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.2914em;"></span><span class="mord mathnormal">h</span><span class="mopen">(</span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+(13)</td>
+<td>Calculate the novelty at time k</td>
+</tr>
+<tr>
+<td><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>S</mi><mi>k</mi></msub><mo>=</mo><msub><mi>H</mi><mi>k</mi></msub><msubsup><mi>P</mi><mi>k</mi><mo>−</mo></msubsup><msubsup><mi>H</mi><mi>k</mi><mi>T</mi></msubsup><mo>+</mo><msub><mi>R</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">S_k = H_k P_k^- H_k^T + R_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1828em;vertical-align:-0.2914em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.453em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+(14)</td>
+<td>Calculate the innovation covariance matrix at time k</td>
+</tr>
+<tr>
+<td><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>K</mi><mi>k</mi></msub><mo>=</mo><msubsup><mi>P</mi><mi>k</mi><mo>−</mo></msubsup><msubsup><mi>H</mi><mi>k</mi><mi>T</mi></msubsup><msubsup><mi>S</mi><mi>k</mi><mrow><mo>−</mo><mn>1</mn></mrow></msubsup></mrow><annotation encoding="application/x-tex">K_k = P_k^- H_k^T S_k^{-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1828em;vertical-align:-0.2914em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-2.453em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-2.4086em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+(15)</td>
+<td>Compute the Kalman gain at time k</td>
+</tr>
+<tr>
+<td><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mover accent="true"><mi>x</mi><mo>^</mo></mover><mi>k</mi></msub><mo>=</mo><msubsup><mover accent="true"><mi>x</mi><mo>^</mo></mover><mi>k</mi><mo>−</mo></msubsup><mo>+</mo><msub><mi>K</mi><mi>k</mi></msub><msub><mi>y</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">\hat{x}_k = \hat{x}_k^- + K_k y_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.2914em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+(16)</td>
+<td>Update the state estimate at time k</td>
+</tr>
+<tr>
+<td><p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>P</mi><mi>k</mi></msub><mo>=</mo><mo stretchy="false">(</mo><mi>I</mi><mo>−</mo><msub><mi>K</mi><mi>k</mi></msub><msub><mi>H</mi><mi>k</mi></msub><mo stretchy="false">)</mo><msubsup><mi>P</mi><mi>k</mi><mo>−</mo></msubsup></mrow><annotation encoding="application/x-tex">P_k = (I - K_k H_k) P_k^-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.2914em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-2.4086em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2914em;"><span></span></span></span></span></span></span></span></span></span></span></p>
+(17)</td>
+<td>Update the error covariance matrix at time k</td>
+</tr>
+</tbody>
+</table>
+<p>Here's a brief description of the variables used in the formulas:</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mover accent="true"><mi>x</mi><mo>^</mo></mover><mi>k</mi><mo>−</mo></msubsup></mrow><annotation encoding="application/x-tex">\hat{x}_k^-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.3013em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8115em;"><span style="top:-2.3987em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.1031em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3013em;"><span></span></span></span></span></span></span></span></span></span>: predicted state estimate at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover accent="true"><mi>x</mi><mo>^</mo></mover><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">\hat{x}_{k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9028em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.2222em;"><span class="mord">^</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>: state estimate at time k-1</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">u_{k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6389em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>: control input at time k-1</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span>: nonlinear state transition function</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>P</mi><mi>k</mi><mo>−</mo></msubsup></mrow><annotation encoding="application/x-tex">P_k^-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1128em;vertical-align:-0.3013em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8115em;"><span style="top:-2.3987em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.1031em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">−</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3013em;"><span></span></span></span></span></span></span></span></span></span>: predicted error covariance matrix at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">F_{k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>: state transition matrix at time k-1</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Q</mi><mrow><mi>k</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">Q_{k-1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span>: process noise covariance matrix at time k-1</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">z_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.044em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: measurement at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span>: measurement function</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>y</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">y_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: innovation at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">H_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: measurement matrix at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">R_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: measurement noise covariance matrix at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">S_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: innovation covariance matrix at time k</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">K_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>: Kalman gain at time k</li>
+</ul>
+<h4 id="34112-exdendedkalmanfilter-class">3.4.11.2. ExdendedKalmanFilter Class</h4>
+<p>The <code>ExtendedKalmanFilter</code> class is an implementation of an extended Kalman filter for estimating the distance of a mobile device based on received signal strength indication (RSSI) measurements.</p>
+<h5 id="341121-constructor">3.4.11.2.1. Constructor</h5>
+<ul>
+<li><code>ExtendedKalmanFilter()</code>: Constructs a new <code>ExtendedKalmanFilter</code> object with default initial values for the matrices.</li>
+</ul>
+<h5 id="341122-public-methods">3.4.11.2.2. Public Methods</h5>
+<ul>
+<li><code>double addRSSI(double rssi)</code>: Returns the estimated distance of the tracker device.</li>
+</ul>
+<h3 id="3412-aplication-logging">3.4.12. Aplication logging</h3>
+<p>The <code>Logger</code> class provides a way to log messages with different log levels. The log level is set by changing the value of the <code>LOGLEVEL</code> constant. The different log levels are <code>ERROR</code>, <code>INFORMATION</code>, <code>WARNING</code>, <code>VERBOSE</code>, and <code>DEBUG</code>. Each log level has two versions of the method, one that takes only a tag and a message and one that also takes a <code>StackTraceElement</code> parameter that provides information about the location of the log statement in the code. This class extends the log information of the class Log.</p>
+<h4 id="34121-methods">3.4.12.1. Methods</h4>
+<ul>
+<li><code>v(String tag, String msg)</code>: Logs a verbose message with the given tag and message.</li>
+<li><code>v(String tag, String msg, @NonNull StackTraceElement ste)</code>: Logs a verbose message with the given tag, message, and <code>StackTraceElement</code>.</li>
+<li><code>d(String tag, String msg)</code>: Logs a debug message with the given tag and message.</li>
+<li><code>d(String tag, String msg, @NonNull StackTraceElement ste)</code>: Logs a debug message with the given tag, message, and <code>StackTraceElement</code>.</li>
+<li><code>i(String tag, String msg)</code>: Logs an information message with the given tag and message.</li>
+<li><code>i(String tag, String msg, @NonNull StackTraceElement ste)</code>: Logs an information message with the given tag, message, and <code>StackTraceElement</code>.</li>
+<li><code>w(String tag, String msg)</code>: Logs a warning message with the given tag and message.</li>
+<li><code>w(String tag, String msg, @NonNull StackTraceElement ste)</code>: Logs a warning message with the given tag, message, and <code>StackTraceElement</code>.</li>
+<li><code>e(String tag, String msg)</code>: Logs an error message with the given tag and message.</li>
+<li><code>e(String tag, String msg, @NonNull StackTraceElement ste)</code>: Logs an error message with the given tag, message, and <code>StackTraceElement</code>.</li>
+</ul>
+<p>The <code>Logger</code> class also has a <code>LOGLEVEL</code> constant that can be used to set the log level. The class provides several boolean constants that can be used to determine whether a particular log level is enabled or not. These constants are <code>ERROR</code>, <code>INFORMATION</code>, <code>WARNING</code>, <code>VERBOSE</code>, and <code>DEBUG</code>. The value of each boolean constant depends on the value of the <code>LOGLEVEL</code> constant.</p>
+<h4 id="34122-usage-example">3.4.12.2. Usage Example:</h4>
+<pre><code class="language-Java"><span class="hljs-comment">/* VERBOSE ACTION */</span>
+Logger.v(<span class="hljs-string">&quot;TAG&quot;</span>, <span class="hljs-string">&quot;msg&quot;</span>,Thread.currentThread().getStackTrace()[<span class="hljs-number">2</span>]);
+</code></pre>
+<p>Terminal:</p>
+<pre><code class="language-Log">V/TAG: &lt;YYYY-MM-DD hh:mm:ss&gt; [com.rramsauer.iotlocatiotrackerapp.Class|func|1] msg
+</code></pre>
+<h3 id="3413-average-filter">3.4.13. Average Filter</h3>
+<p>The AverageFilter class implements a simple moving average filter that operates on a stream of values. The filter uses a sliding window of a specified size to calculate the average of the last n values in the stream.</p>
+<h4 id="34131-mathematical-description">3.4.13.1. Mathematical Description</h4>
+<p>The AverageFilter class can be described matematically as follows:</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>direction</mtext><mo>=</mo><mfrac><mn>1</mn><mrow><mi>c</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>t</mi><mi>O</mi><mi>f</mi><mi>V</mi><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mi>s</mi></mrow></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>c</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>t</mi><mi>O</mi><mi>f</mi><mi>V</mi><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mi>s</mi></mrow></munderover><mi>v</mi><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mi>s</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">\text{direction} = \frac{1}{countOfValues} \sum_{i=1}^{countOfValues} values[i]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord text"><span class="mord">direction</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.1609em;vertical-align:-1.2777em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">co</span><span class="mord mathnormal">u</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.02778em;">tO</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">Va</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">u</span><span class="mord mathnormal">es</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8832em;"><span style="top:-1.8723em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3471em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">co</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">tO</span><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span><span class="mord mathnormal mtight">Va</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">es</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">u</span><span class="mord mathnormal">es</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span></span></span></span></span></p>
+<p>Therefore, if the fordefined array is full of values, the last added value is overwritten with the new value and then the average of all values in the array is calculated..</p>
+<h4 id="34132-averagefilter-class">3.4.13.2. AverageFilter Class</h4>
+<p><code>countOfValues</code> Define the number of values which will be used for averaging.
+<code>values</code> Is the array of stored values. The count of elements in the array is set with <code>countOfValues</code>.
+<code>arrayPosition</code> Represents the current position in the 'Values' array.</p>
+<h5 id="341321-constructor">3.4.13.2.1. Constructor</h5>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-title function_">AverageFilter</span><span class="hljs-params">(<span class="hljs-type">int</span> countOfValues, <span class="hljs-type">double</span> startValue)</span> {}
+</code></pre>
+<ul>
+<li>Initialize <code>countOfValues</code>.</li>
+<li>Initialize <code>values</code> as an array of <code>countOfValues</code> floating-point numbers, with each element set to <code>startValue</code>.</li>
+<li>Initialize <code>arrayPosition</code> amd set it to 0.</li>
+</ul>
+<h5 id="341322-addrssidouble-rssi">3.4.13.2.2. <code>addRSSI(double Rssi)</code></h5>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-type">double</span> <span class="hljs-title function_">addRSSI</span><span class="hljs-params">(<span class="hljs-type">double</span> Rssi)</span> {}
+</code></pre>
+<ul>
+<li>Set the <code>arrayPosition</code>-th element of <code>values</code> to <code>Rssi</code>.</li>
+<li>Update <code>arrayPosition</code> to <code>(arrayPosition+1)%countOfValues</code>.</li>
+<li>Compute the sum of all values in the <code>values</code> array.</li>
+<li>Compute the average of the values in the <code>values</code> array by dividing the sum by <code>countOfValues</code>.</li>
+<li>Return the average as the output of the method.</li>
+</ul>
+<h3 id="3414-filter-with-average-and-kalman">3.4.14. Filter with average and Kalman</h3>
+<p>The FilterWithKalman class is a Java implementation of a filter for RSSI (Received Signal Strength Indicator) values, which uses both a <a href="#3314-average-filter">moving average filter</a> and a <a href="#3310-kalman-filter-implemenatation">Kalman Filter</a>. The moving average filter is applied to smooth the RSSI values, and the Kalman filter is applied to estimate the true RSSI value based on the noisy measurements.</p>
+<h4 id="34141-filterwithkalman-class">3.4.14.1. FilterWithKalman Class</h4>
+<h4 id="34142-constructor">3.4.14.2. Constructor</h4>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-title function_">FilterWithKalman</span><span class="hljs-params">(<span class="hljs-type">int</span> countOfValues, <span class="hljs-type">double</span> startValue)</span> {}
+</code></pre>
+<h5 id="341421-addrssidouble-rssi">3.4.14.2.1. <code>addRSSI(double Rssi)</code></h5>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-type">double</span> <span class="hljs-title function_">addRSSI</span><span class="hljs-params">(<span class="hljs-type">double</span> Rssi)</span> {}
+</code></pre>
+<h3 id="3415-tracker-direction-calculation">3.4.15. Tracker direction Calculation</h3>
+<p>We have implemented two classes. However, we did not succeed in determining an approximate direction.
+The following classes have been implemented:</p>
+<ul>
+<li>TrackerDirectionCalculator - This class is currently in inizialized.
+<ul>
+<li>Error description direction determination only possible in the open under optimal conditions.</li>
+</ul>
+</li>
+<li>GeoDirectionCalculator - This class is not initialized.
+<ul>
+<li>Implementation error: Does not return a direction.</li>
+</ul>
+</li>
+</ul>
+<h4 id="34151-basics-of-the-calculation-procedure">3.4.15.1. Basics of the calculation procedure</h4>
+<img src="file:///c:\Users\ramsa\AndroidStudioProjects\IOTLocatioTrackerAPP\img\DirectionCalculationGraphicalRepresentation.svg" width="500"/>
+<p>The idea behind determining the direction of the tracker was:
+By changing the position of the mobile device, two distance estimates can be made to one tracker. With the distance covered, a triangle can then be formed. Which makes it possible to determine the direction of the tracker via drigonometry. This can be determined by the information position 1 (latitute, longtitute, distance to the tracker) and position 2 (latitute, longtitute, distance to the tracker) as well as the moved direction in dependence of the direction to the north. Subsequently, only the orientation of the device has to be determined and added. Mathematically and theoretically this seemed clear. However, the interfering factors are so large that the implementation of filter systems is necessary. Simple filter systems have already been implemented. However, in order to achieve the desired result, further implementations must be carried out.</p>
+<h4 id="34152-trackerdirectioncalculator-class">3.4.15.2. TrackerDirectionCalculator Class</h4>
+<p>The <code>TrackerDirectionCalculator</code> class is used to calculate the direction of a moving object based on a series of distance and geolocation measurements.</p>
+<h5 id="341521-constructors">3.4.15.2.1. Constructors</h5>
+<h6 id="3415211-trackerdirectioncalculatorint-measurementcount">3.4.15.2.1.1. <code>TrackerDirectionCalculator(int measurementCount)</code></h6>
+<p>Constructs a new <code>TrackerDirectionCalculator</code> with the specified number of measurements.</p>
+<h6 id="3415212-parameters">3.4.15.2.1.2. Parameters</h6>
+<ul>
+<li><code>measurementCount</code>: the number of measurements to use for direction calculation</li>
+</ul>
+<h5 id="341522-methods">3.4.15.2.2. Methods</h5>
+<h6 id="3415221-addgeodouble-distance-double-latitude-double-longitude">3.4.15.2.2.1. <code>addGeo(double distance, double latitude, double longitude)</code></h6>
+<p>Adds a new distance and geolocation measurement to the calculator and returns the calculated direction.</p>
+<h6 id="3415222-parameters">3.4.15.2.2.2. Parameters</h6>
+<ul>
+<li><code>distance</code>: the distance traveled since the last measurement</li>
+<li><code>latitude</code>: the current latitude of the object being tracked</li>
+<li><code>longitude</code>: the current longitude of the object being tracked</li>
+</ul>
+<h6 id="3415223-returns">3.4.15.2.2.3. Returns</h6>
+<ul>
+<li>the direction in degrees, based on the current and previous measurements</li>
+</ul>
+<h5 id="341523-defines">3.4.15.2.3. Defines</h5>
+<ul>
+<li><code>MIN_MOVEMENT_IN_M</code>: the minimum movement in meters required to calculate a new direction</li>
+</ul>
+<h2 id="35-libarys-and-dependensy">3.5. Libarys and Dependensy</h2>
+<p>This application use following libarys and dependensy:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Gradle Include</th>
+<th>Version</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://opencsv.sourceforge.net/">Opencsv</a></td>
+<td>implementation 'com.opencsv:opencsv:5.7.1'</td>
+<td>5.7.1</td>
+<td>Can work with stateful bean.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/OmarAflak/Arduino-Library">Arduino Serial</a></td>
+<td>implementation 'me.aflak.libraries:arduino:1.4.5'</td>
+<td>1.4.5</td>
+<td>USB serial communication.</td>
+</tr>
+<tr>
+<td><a href="https://mvnrepository.com/artifact/org.projectlombok/lombok">Project Lombok</a></td>
+<td>compileOnly 'org.projectlombok:lombok:1.18.24'</td>
+<td>1.18.24</td>
+<td>Automatic Resource Management.</td>
+</tr>
+<tr>
+<td><a href="https://mvnrepository.com/artifact/org.ejml/ejml-core">EJML</a></td>
+<td>implementation 'org.ejml:ejml-core:0.39'</td>
+<td>0.39</td>
+<td>Dense and sparse matrix linear algebra.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="36-third-party-software-and-sources">3.6. Third party software and sources</h2>
+<p>This application implements sources from the following third parties:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Author</th>
+<th>Impl. Application</th>
+<th>Source</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CompassAssistant</td>
+<td><a href="https://github.com/klein-artur">Artur Hellmann</a></td>
+<td>com.rramsauer.iotlocatiotrackerapp.util.compassAssistant.CompassAssistant</td>
+<td><a href="https://github.com/klein-artur/Simple-Android-Compass-Assistant">github</a></td>
+<td>V1.0</td>
+</tr>
+<tr>
+<td>KalmannFilter</td>
+<td><a href="https://stackoverflow.com/users/9993413/z3r0">Z3R0</a></td>
+<td>com.rramsauer.iotlocatiotrackerapp.util.Filter.KalmanFilter</td>
+<td><a href="https://stackoverflow.com/questions/36399927/distance-calculation-from-rssi-ble-android">stackoverflow</a></td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h1 id="4-futur-work-and-bugs">4. Futur work and bugs</h1>
+<h2 id="41-bugs">4.1. Bugs</h2>
+<p>Toa Table in the UWB fragment the values are displayed offset.</p>
+<ul>
+<li>Settings fragment SharedPreference BUG
+<ul>
+<li>When growing to the Settings fragment a data update of UWB short address and UWB UID is done via the Bluetooth gateway Artripute.</li>
+</ul>
+</li>
+<li>Direction tracker calculation does not return a value.
+<ul>
+<li>See description <a href="#3315-tracker-direction-calculation">Tracker direction Calculation</a></li>
+</ul>
+</li>
+<li>If a Bluetooth scan is performed in the device settings and in the app at the same time, the application crashes.</li>
+</ul>
+<h2 id="42-futur-work">4.2. Futur Work</h2>
+<ul>
+<li>Position determination with different location provider. The most accurate result should be adopted.</li>
+<li>Move GBS location determination to service.</li>
+<li>Optimization of position detection to save battery.</li>
+<li>To improve the distance determination via RSSI, a teaching algorithm should be used which adapts the filter settings to the environment and the distance. In the course of determining the optimal filter settings, it was determined that these should be adapted according to the situation. As well as factors should be integrated which, for example, adjust the estimated distance in case of rain.</li>
+<li>Make MainActivity slimmer. Move code from the MainActivity to its own classes.</li>
+<li>Add filter settings in the SharedPrefference and SettingsFragement.</li>
+<li>Implement UWB service on a UWB compatible mobile device.</li>
+</ul>
+<h1 id="5-getting-started">5. Getting started</h1>
+<h2 id="51-install-application">5.1. Install application</h2>
+<ol>
+<li>Download this repository extract the Software-Source to your working directory of Android-Studio</li>
+<li>Open the Project in Android Studio.</li>
+<li>Adjust the Grandle settings to your environment.</li>
+<li>Check AndroidManifest.xml</li>
+<li>Sync Project with Grandle.</li>
+<li>Change the settings of your Smartphone to development mode. <a href="https://developer.android.com/studio/debug/dev-options">Configure on-device developer options</a></li>
+<li>Connect your smartphone with USB on your development computer and accept the access on the cell phone.</li>
+<li>If you have done all the steps correctly, the play button on the upper right side will turn green. Now select the connected device via the device manager. (Top right corner)</li>
+<li>Then you can click the play button on the upper right side and the app will be deployed to your mobile device.</li>
+</ol>
+<img src="file:///c:\Users\ramsa\AndroidStudioProjects\IOTLocatioTrackerAPP\img\AndroidStudio_Deploy.png"/>
+<p><em>If you encounter any problems. You can get more information at <a href="https://developer.android.com/">Android Developer</a>.</em></p>
+<p><strong>Attention:</strong> This application cannot be run with a virtual device from Android Studio. Android Studio does not support bluetooth/smartphone sensor technology.</p>
+<h2 id="52-launch-application">5.2. Launch application</h2>
+<ol>
+<li>
+<p>Open the application by clicking on the Applications icon.</p>
+<img src="file:///c:\Users\ramsa\AndroidStudioProjects\IOTLocatioTrackerAPP\img\Application_Icon.png" alt="ArchiTecture logo" height="50" />
+</li>
+<li>
+<p>Accept the requested rights.</p>
+</li>
+<li>
+<p>Now you can use all the features of the app.</p>
+</li>
+</ol>
+<h2 id="53-references">5.3. References</h2>
+<p>[1]&quot;Kalman Filtering: Theory and Practice Using MATLAB&quot; by Mohinder S. Grewal and Angus P. Andrews, 29 January 2008  ISBN:9780470377819</p>
+<p>[2]&quot;Introduction to Random Signals and Applied Kalman Filtering&quot; by Robert Grover Brown and Patrick Y.C. Hwang ISBN:978-0470609699</p>
+<p>[3] Anindya S. Paul, Student Member, IEEE, and Eric A. Wan, Member, IEEE, &quot;RSSI-Based Indoor Localization and Tracking Using Sigma-Point Kalman Smoothers,&quot; ISSN:1941-0484</p>
+<p>[4] J. Jurevics, D. Kanaska and G. Strazdins, &quot;Comparison of RSSI-Based Indoor Localization Techniques for Bluetooth Low Energy Beacons,&quot; 2017 IEEE International Conference on Engineering and Technology (ICET), Antigua, Guatemala, 2017, pp. 1-6, doi: 10.1109/ICEngTechnol.2017.8125123.</p>
+<p>[5] Distance calculation from RSSI BLE android - Stack Overflow, Stack Overflow, May 7, 2020. Adresse: <a href="https://stackoverflow.com/questions/36399927/distance-calculation-from-rssi-ble-android">https://stackoverflow.com/questions/36399927/distance-calculation-from-rssi-ble-android</a>.</p>
+<p>[6] Majidi, M.A., Hsieh, CS. &amp; Yazdi, H.S. Kalman Filter Reinforced by Least Mean Square for Systems with Unknown Inputs. Circuits Syst Signal Process 37, 4955–4972 (2018). <a href="https://doi.org/10.1007/s00034-018-0792-x">https://doi.org/10.1007/s00034-018-0792-x</a></p>
+<p>[7] BLE Indoor Localization based on Improved RSSI and Trilateration by IEEE 978-1-7281-5617-0</p>
+<p>[8] Golestani, Ali, et al. &quot;Improving the precision of RSSI-based lowenergy localization using path loss exponent estimation.&quot; 2014 11th Workshop on Positioning, Navigation and Communication (WPNC). IEEE, 2014.</p>
+<p>[9] Unscented Filtering and Nonlinear Estimation SIMON J. JULIER, MEMBER, IEEE, AND JEFFREY K. UHLMANN, MEMBER, IEEE</p>
+<h1 id="6-author">6. Author</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>e-mail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ramsauer René</td>
+<td><a href="mailto:ic18b066@technikum-wien.at">ic18b066@technikum-wien.at</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="7-copyright">7. Copyright</h1>
+<p>© By Ramsauer René. (More Information: See LICENCE file)</p>
+
+        <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </body>
+    </html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<services>
+    <!-- Is currently not required.
+    <service uuid="0000180f-0000-1000-8000-00805f9b34fb" name="Battery lvl service" >
+        <characteristic uuid="00002a19-0000-1000-8000-00805f9b34fb" name="Battery lvl service"/>
+    </service> -->
+    <service
+        name="Ultra-wide-band device information Service"
+        id="gatt_ultra_wide_band_device_information_service"
+        uuid="69c94bb5-1f81-45fc-b4a9-46877efb52fd">
+        <characteristic
+            name="Ultra-wide-band short Address Characteristic"
+            id="gatt_ultra_wide_band_short_address"
+            uuid="0f81c26b-1e6c-46de-9d7a-15b5d54d2386" />
+        <characteristic
+            name="Ultra-wide-band unique identifier Characteristic"
+            id="gatt_ultra_wide_band_identifier_characteristic"
+            uuid="7cc63e05-dcd5-4e67-a744-766267e363a1" />
+    </service>
+</services>

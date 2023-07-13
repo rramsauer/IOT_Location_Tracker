@@ -1,0 +1,193 @@
+<resources>
+    <!-- *********************** -->
+    <!-- * Application main    * -->
+    <!-- *********************** -->
+    <string name="app_name">IOT Locatio Tracker APP</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- ******************* -->
+    <!-- * Place Holder    * -->
+    <!-- ******************* -->
+    <string name="str_placeholder_emptyStr"> </string>
+    <string name="str_placeholder_number_integer">00</string>
+    <string name="str_placeholder_number_float">000.00</string>
+    <string name="str_placeholder_disconnect">Disconnect</string>
+    <string name="str_placeholder_id">XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXX</string>
+    <string name="str_placeholder_uwb_id">XX:XX:XX:XX:XX:XX:XX:XX</string>
+    <string name="str_placeholder_name">Name</string>
+    <string name="str_placeholder_contentDescription_image">Image</string>
+    <string name="str_placeholder_coordinates">41°24\'12.2"N 2°10'26.5"E</string>
+    <string name="icon">ICON</string>
+    <string name="str_not_set">Not set</string>
+    <string name="str_not_date">Not Date</string>
+
+    <!-- ******************* -->
+    <!-- * Testing String   * -->
+    <!-- ******************* -->
+    <string name="test_string_first_rr">Only download attachments when manually requested</string>
+
+    <!-- ************************** -->
+    <!-- * BLE  Fragment          * -->
+    <!-- ************************** -->
+    <string name="fragment_title_ble">BLE</string>
+    <!-- BLE Fragment - Container actual value -->
+    <string name="fragmentBle_containerActualValue_label_trackerLocalName">Local Name:</string>
+    <string name="fragmentBle_containerActualValue_label_trackerID">ID:</string>
+    <string name="fragmentBle_containerActualValue_label_RSSIValue">RSSI:</string>
+    <string name="fragmentBle_containerActualValue_label_RSSIValue_Unit">dbm</string>
+    <string name="fragmentBle_containerActualValue_label_DistanceValue">Distance</string>
+    <string name="fragmentBle_containerActualValue_label_DistanceValue_Unit">m</string>
+    <!-- BLE Fragment - Table -->
+    <string name="fragmentBle_Table_row1_Name">Time:</string>
+    <string name="fragmentBle_Table_row2_Name">RSSI</string>
+    <string name="fragmentBle_Table_row3_Name">Filtered </string>
+    <string name="fragmentBle_Table_row4_Name">Distance</string>
+    <string name="fragmentBle_Table_row1_Unit"> </string>
+    <string name="fragmentBle_Table_row2_Unit">[dbm]</string>
+    <string name="fragmentBle_Table_row3_Unit">[dbm]</string>
+    <string name="fragmentBle_Table_row4_Unit">[m]</string>
+
+    <!-- ************************** -->
+    <!-- * UWB  Fragment          * -->
+    <!-- ************************** -->
+    <string name="fragment_title_Uwb">UWB</string>
+    <!-- UWB Fragment - Container actual value -->
+    <string name="fragmentUwb_containerActualValue_label_short_adr">Short address:</string>
+    <string name="fragmentUwb_containerActualValue_label_trackerUID">UID:</string>
+    <string name="fragmentUwb_containerActualValue_label_RSSIValue">RSSI:</string>
+    <string name="fragmentUwb_containerActualValue_label_RSSIValue_Unit">dbm</string>
+    <string name="fragmentUwb_containerActualValue_label_DistanceRSSIValue">Distance RSSI:</string>
+    <string name="fragmentUwb_containerActualValue_label_DistanceRSSIValue_Unit">m</string>
+    <string name="fragmentUwb_containerActualValue_label_DistanceTOAValue">Distance TOA:</string>
+    <string name="fragmentUwb_containerActualValue_label_DistanceTOAValue_Unit">m</string>
+    <!-- UWB Fragment - Table1 -->
+    <string name="fragmentUwb_Table1_row1_Name">Time:</string>
+    <string name="fragmentUwb_Table1_row2_Name">Distance</string>
+    <string name="fragmentUwb_Table1_row1_Unit">[hh:mm:ss:ms]</string>
+    <string name="fragmentUwb_Table1_row2_Unit">[m]</string>
+    fragmentUwb_Table2_row4_Name
+    <!-- UWB Fragment - Table2 -->
+    <string name="fragmentUwb_Table2_row1_Name">Time:</string>
+    <string name="fragmentUwb_Table2_row2_Name">RSSI</string>
+    <string name="fragmentUwb_Table2_row3_Name">Filtered</string>
+    <string name="fragmentUwb_Table2_row4_Name">Distance</string>
+    <string name="fragmentUwb_Table2_row1_Unit">[hh:mm:ss:ms]</string>
+    <string name="fragmentUwb_Table2_row2_Unit">[dbm]</string>
+    <string name="fragmentUwb_Table2_row3_Unit">[dbm]</string>
+    <string name="fragmentUwb_Table2_row4_Unit">[m]</string>
+
+    <!-- *************************** -->
+    <!-- * INFO  Fragment          * -->
+    <!-- *************************** -->
+    <string name="fragment_title_Information">Information</string>
+    <string name="fragment_information_title_card">By René Ramsauer</string>
+    <string name="fragment_information_paragraph">
+        <br>You can get all the information about the functionality from the readme.
+            This app is used to determine the behavior of ble and uwb tracking systems.</br>
+        <br> </br>
+        <br>Version: 2.8"</br>
+    </string>
+    <!-- NAV Fragment - Status -->
+
+    <!-- ************************** -->
+    <!-- * NAV  Fragment          * -->
+    <!-- ************************** -->
+    <string name="fragment_title_Navigate">Navigate</string>
+    <!-- NAV Fragment - Status -->
+    <string name="fragmentNav_TextView_status_ble_active">Navigate via BLE is \n ACTIVE</string>
+    <string name="fragmentNav_TextView_status_uwb_active">Navigate via UWB is \n ACTIVE</string>
+    <string name="fragmentNav_TextView_status_deactivated">Compass MODE</string>
+    <!-- NAV Fragment - CENTER -->
+    <string name="fragmentNav_TextView_unit_distance">m</string>
+    <string name="fragmentNav_TextView_unit_rssi">dbm</string>
+    <string name="fragmentNav_TextView_unit_degree">°N</string>
+    <!-- NAV Fragment - BOTTOM -->
+    <string name="fragmentNav_TextView_bottom_coordinates">Pos.:</string>
+
+    <!-- ************************** -->
+    <!-- * Preference Fragment    * -->
+    <!-- ************************** -->
+    <string name="fragment_title_Settings">Settings</string>
+    <!-- Settings default string -->
+    <string name="settings_default_not_show">[NOT SHOW]</string>
+    <!-- BLE -->
+    <string name="settings_ble_start_scan_summary_actual">Please select a device in the settings below.</string>
+    <string name="settings_ble_title">BLE Settings</string>
+    <string name="settings_ble_choose_device">Choose Bluetooth Device:</string>
+    <string name="settings_ble_choose_device_disconnect">Disconnect Bluetooth device:</string>
+    <string name="settings_ble_list_preference_no_device_connected">NO DEVICE CONNECTED</string>
+    <string name="settings_ble_enable_bluetooth">Enable Bluetooth</string>
+    <!-- BLE Devault Value -->
+    <string name="settings_ble_list_preference_devault_entry">No devices scanned.</string>
+    <string name="settings_ble_list_preference_devault_value">No Value</string>
+    <!-- BLE Key -->
+    <string name="settings_ble_permission_not_accepted_key">settingsBlePermissionNotAccepted</string>
+    <string name="settings_ble_dialog_choose_device_key">settingsBleDialogChooseDeviceKey</string>
+    <string name="settings_ble_enable_bluetooth_key">settingsBleEnableBluetoothKey</string>
+    <!-- UWB -->
+    <string name="settings_uwb_title">UWB Settings</string>
+    <string name="settings_uwb_short_adr">UWB short address</string>
+    <string name="settings_uwb_uid">UWB UID</string>
+    <string name="settings_uwb_manuele_devices_choice_manuel">Change to manuel UWB device settings:</string>
+    <string name="settings_uwb_manuele_devices_choice_auto">Change to automatic UWB device assignment:</string>
+    <string name="settings_uwb_device_id_example">The Device ID should have the following format: XX:XX:XX:XX:XX:XX:XX:XX</string>
+    <string name="settings_uwb_device_short_adr_example">The Device short ID should have the following format: XXXX \n Attention: The short ID can change.</string>
+    <!-- UWB Key -->
+    <string name="settings_uwb_short_adr_key">settingsUwbShortAdrKey</string>
+    <string name="settings_uwb_uid_key">settingsUwbUidKey</string>
+    <string name="settings_uwb_manuele_devices_choice_key">settingsUwbManueleDevicesChoiceKey</string>
+    <!-- NAV -->
+    <string name="settings_nav_title">Navigation Settings</string>
+    <string name="settings_nav_enable">Navigation enable</string>
+    <string name="settings_nav_ble_enable">Navigation BLE enable:</string>
+    <string name="settings_nav_uwb_enable">Navigation UWB enable:</string>
+    <string name="settings_nav_coordinate_format">Format of coordinate:</string>
+    <!-- NAV Key -->
+    <string name="settings_nav_enable_key">settingsNavEnableKey</string>
+    <string name="settings_nav_ble_enable_key">settingsNavBleEnableKey</string>
+    <string name="settings_nav_uwb_enable_key">settingsNavUwbEnableKey</string>
+    <string name="settings_nav_coordinate_format_key">settingsNavCoordinateFormatKey</string>
+    <!-- CSV -->
+    <string name="settings_CSV_title">CSV Settings</string>
+    <!-- CSV Key -->
+    <string name="settings_csv_enable_key">settingsCsvEnableKey</string>
+    <string name="settings_csv_file_key">settingsCsvFileKey</string>
+    <string name="settings_csv_directory_key">settingsCsvDirectoryKey</string>
+    <string name="settings_csv_number_row_key">settingsCsvNumberRowKey</string>
+    <string name="settings_csv_interval_ms_key">settingsCsvIntervalKey</string>
+    <string name="settings_csv_time_s_key">settingsCsvTimeKey</string>
+    <!-- CSV -->
+    <string name="settings_csv_enable">Enable measurement data</string>
+    <string name="settings_csv_file">Choose a file name</string>
+    <string name="settings_csv_directory">Choose a directory name</string>
+    <string name="settings_csv_number_row">Choose the number of rows per file</string>
+    <string name="settings_csv_interval_ms">Choose Measuring interval [ms]</string>
+    <string name="settings_csv_time_s">Choose Measuring time [s]</string>
+
+    <!-- ************************** -->
+    <!-- * Toast ore Snack-bar    * -->
+    <!-- ************************** -->
+    <string name="user_msg_ble_scan_succesfull">Bluetooth scan was successful.\nDevices could be found in the near vicinity.</string>
+    <string name="user_msg_ble_scan_not_succesfull">Bluetooth scan was not successful.\nNo devices could be found in the near vicinity.</string>
+    <string name="user_msg_ble_is_connected">Bluetooth is connected.</string>
+    <string name="user_msg_ble_is_not_connected">Bluetooth is not connected.</string>
+
+    <!-- ************************** -->
+    <!-- * List Dialog            * -->
+    <!-- ************************** -->
+    <!-- List Dialog  Devault Value -->
+    <string name="list_dialog_header">Custom list dialog</string>
+    <string name="list_dialog_sub_header">Sup header txt</string>
+    <string name="list_dialog_button_button_left">LEFT</string>
+    <string name="list_dialog_button_button_right">RIGHT</string>
+    <string name="list_dialog_button_button_center">CENTER</string>
+    <!-- List Dialog Bluetooth Value -->
+    <string name="list_dialog_ble_header">Search bluetooth device…</string>
+    <string name="list_dialog_ble_sub_header">Select a device or press cancel.\nNote: If you exit this dialog without a warning,\nthe app will not work correctly.</string>
+    <string name="list_dialog_ble_button_cancel">Cancel</string>
+    <string name="list_dialog_ble_button_search">Search</string>
+    <string name="list_dialog_ble_button_stop">Stop</string>
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO</string>
+
+</resources>
