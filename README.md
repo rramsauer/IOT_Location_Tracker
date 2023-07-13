@@ -1,6 +1,6 @@
 # IOT_Location_Tracker
- Diese sourcen werden im zuge einer Bachelorarbeit veröffentlich.
-Beachten sie die Lizenzbedinningen:
+These sources are published as part of a bachelor thesis.
+Please note the license terms:
 
 ```
 Copyright (c) 2023 René Ramsauer
