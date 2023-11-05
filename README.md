@@ -25,3 +25,5 @@ DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH
 THE THIS REPOSETPRY OR THE USE OR OTHER DEALINGS IN THE REPOSETORY.
 ```
+
+Furthermore, the authors are not liable for the functionality of the documents and developments published in these repositories.
