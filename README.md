@@ -1,4 +1,4 @@
-# IOT_Location_Tracker
+# IOT Location Tracker
 These sources are published as part of a bachelor thesis.
 Please note the license terms:
 
